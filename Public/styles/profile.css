@@ -1,0 +1,46 @@
+.userProfile .inner, .petProfile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.profileSidebar {
+    width: 15%;
+}
+.petProfile {
+    width: 80%;
+}
+.petInfoAndIMG {
+    display: flex;
+    width: 100%;
+    align-items: end;
+    justify-content: space-between;
+}
+.petIMG {
+    width: 35%;
+}
+.petInfo {
+    width: 60%;
+}
+.petDesc {
+    margin: 20px 0;
+    border-bottom: 2px solid #eaeaea;
+    border-top: 2px solid #eaeaea;
+    padding: 0 40px;
+}
+.petDesc h3 {
+    font-size: 1.5em;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+.petDesc p {
+    padding-left: 10px;
+    line-height: 1.5em;
+    font-size: 1.25em;
+}
+.msgBoard, .map {
+    width: 45%;
+}
+.msgBoard {
+    border: 1px solid black;
+}
