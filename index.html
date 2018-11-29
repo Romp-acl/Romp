@@ -7,8 +7,34 @@
     <link rel="stylesheet" href="public/styles/main.css">
     <script id="user-profile" type="text/x-handlebars-template">
         <div class="inner">
-            <img src="{{}}">
-            
+            <div class="profileSidebar">
+                <ul>
+                    <li>{{pet1}}</li>
+                    <li>{{pet2}}</li>
+                    <li>{{pet3}}</li>
+                </ul>
+            </div>
+            <div class="petProfile">
+                <section class="petInfoAndIMG">
+                    <img src="{{img}}" alt="" class="petIMG">
+                    <aside class="petInfo">
+                        <h2>{{name}}</h2>
+                        <ul>
+                            <li>Breed: {{breed}}</li>
+                            <li>Gender: {{sex}}</li>
+                            <li>Color: {{color}}</li>
+                            <li>Age: {{age}}</li>
+                            <li>Personality: {{temperment}}</li>
+                            <li>Looking for: {{interest}}</li>
+                        </ul>
+                    </aside>
+                </section>
+                <div class="petDesc"><h3>About:</h3><p>{{about}}</p></div>
+                <div class="msgBoard"></div>
+                <div class="map">
+                    <img src="https://media.istockphoto.com/vectors/paris-vector-city-map-vector-id984847490?k=6&m=984847490&s=612x612&w=0&h=j0Zay98FYqVtfx-F4SfnlXayx5AzBHhyd6XgB7vxOn0=" alt="">
+                </div>
+            </div>
         </div>
     </script>
 </head>
