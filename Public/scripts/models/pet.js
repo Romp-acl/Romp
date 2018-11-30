@@ -1,4 +1,4 @@
- function PetProfile(img, breed, sex, name, age, color, size, temperment, interest) {
+ function PetProfile(img, breed, sex, name, age, color, size, temperment, interests) {
     this.img = img;
     this.breed = breed;
     this.sex = sex;
@@ -7,7 +7,7 @@
     this.color = color;
     this.size = size;
     this.temperment = temperment;
-    this.interest = interest;
+    this.interest = interests;
     this.about = about;
 }
 
