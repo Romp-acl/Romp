@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "owner_id": "1",
         "img": "src= 'Public/assets/dogs/mr.-bubz.jpg'",
         "breed": "Chihuahua mix",
@@ -9,10 +10,12 @@
         "color": "white and brown",
         "size": "small",
         "temperment": "feisty", 
-        "interests": "getting angry when he's happy"
+        "interests": "getting angry when he's happy",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
 
     {
+        "id": "2",
         "owner_id": "2",
         "img": " src= 'Public/assets/dogs/brown-dachshund.jpg'",
         "breed": "Dachshund",
@@ -22,12 +25,12 @@
         "color": "maple brown",
         "size": "small",
         "temperment": "playful", 
-        "interests": "chasing other dogs"
-
+        "interests": "chasing other dogs",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
 
     {
-
+        "id": "3",
         "owner_id": "3",
         "img": "src = 'Public/assets/dogs/jack-lab.jpg' ",
         "breed": "Jack russel terrier/Labrador mix",
@@ -37,11 +40,12 @@
         "color": "",
         "size": "white and brown",
         "temperment": "cuddly", 
-        "interests": "Cuddling"
-
+        "interests": "Cuddling",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
 
     {
+        "id": "4",
         "owner_id": "4",
         "img": " src='Public/assets/dogs/scrappy.jpg'",
         "breed": "Dachshund Chihuahua mix",
@@ -51,12 +55,12 @@
         "color": "brown",
         "size": "small",
         "temperment": "playful", 
-        "interests": "playing with toys"
-
+        "interests": "playing with toys",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
 
     {
-
+        "id": "5",
         "owner_id": "5",
         "img": "src='Public/assets/dogs/black_Lab.jpg'",
         "breed": "Black Labrador Retriever",
@@ -66,12 +70,13 @@
         "color": "Black",
         "size": "large",
         "temperment": "calm", 
-        "interests": "staying by master's side"
-
+        "interests": "staying by master's side",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
 
     {
-
+        "id": "",
+        "owner_id": "",
         "img": " ",
         "breed": " ",
         "sex": " ",
@@ -80,8 +85,8 @@
         "color": " ",
         "size": " ",
         "temperment": " ", 
-        "interests": " "
-
+        "interests": " ",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     }
 
 ]

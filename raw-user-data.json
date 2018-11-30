@@ -2,24 +2,32 @@
     {
         "id": "1",
         "username": "FearAndLoathing",
+        "password": "password1",
+        "email": "fearandloathing@hotmail.com",
         "address": "4069 SE Gladstone st."
         
     },
     {
         "id": "2",
         "username": "BMWPeter",
+        "password": "password2",
+        "email": "bmwpeter@gmail.com",
         "address": "3945 SE Holgate st."
         
     },
     {
         "id": "3",
         "username": "Ms.brittany",
+        "password": "password3",
+        "email": "brit@gmail.com",
         "address": "1610 SE Belmont st."
         
     },
     {
         "id": "4",
         "username": "Ash&Nick",
+        "password": "password4",
+        "email": "ash@yahoo.com",
         "address": "3826 NE Alameda st."
         
     },
@@ -27,6 +35,8 @@
     {
         "id": "5",
         "username": "Dimitri",
+        "password": "password5",
+        "email": "dimitri@gmail.com",
         "address": "6180 SE Foster rd."
         
     }
