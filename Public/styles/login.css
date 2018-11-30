@@ -1,0 +1,57 @@
+.loginSignup {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.75s ease-in-out;
+    max-width: 768px;
+    margin: auto;
+    margin-top: 20px;
+    border: 3px solid transparent;
+}
+.loginSignup.active {
+    height: 100%;
+    border: 3px solid grey;
+    padding: 20px;
+    background-color: rgba(132, 132, 132, 0.7);
+}
+.loginSignup, .heroTabs {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.heroTabs {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+.heroTabs li {
+    width: 50%;
+    padding: 20px;background-color: #f9f9f9;
+    color: black;
+    box-sizing: border-box;
+}
+.credentialsForm {
+    width: 100%;
+}
+.credentialsForm fieldset {
+    margin-bottom: 20px;
+}
+.credentialsForm input, .credentialsForm select, .credentialsForm textarea {
+    width: 48%;
+    padding: 14px;
+    height: 60px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.credentialsForm select {
+    -webkit-appearance: none;
+}
+.petFieldset input, .petFieldset select, .petFieldset textarea {
+    width: 30%;
+}
+.petFieldset textarea {
+    width: 100%;
+    max-width: 700px;
+    height: 200px;
+}
