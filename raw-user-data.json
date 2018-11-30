@@ -1,0 +1,36 @@
+[
+    {
+        "id": "1",
+        "username": "FearAndLoathing",
+        "address": "4069 SE Gladstone st."
+        
+    },
+    {
+        "id": "2",
+        "username": "BMWPeter",
+        "address": "3945 SE Holgate st."
+        
+    },
+    {
+        "id": "3",
+        "username": "Ms.brittany",
+        "address": "1610 SE Belmont st."
+        
+    },
+    {
+        "id": "4",
+        "username": "Ash&Nick",
+        "address": "3826 NE Alameda st."
+        
+    },
+
+    {
+        "id": "5",
+        "username": "Dimitri",
+        "address": "6180 SE Foster rd."
+        
+    }
+
+
+
+]
