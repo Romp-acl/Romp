@@ -1,0 +1,25 @@
+{
+  "name": "romp",
+  "version": "1.0.0",
+  "description": "romp-data",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Romp-acl/Romp.git"
+  },
+  "author": "katedameron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Romp-acl/Romp/issues"
+  },
+  "homepage": "https://github.com/Romp-acl/Romp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "pg": "^7.7.1"
+  }
+}
