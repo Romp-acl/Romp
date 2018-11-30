@@ -1,6 +1,6 @@
 [
     {
-
+        "owner_id": "1",
         "img": "src= 'Public/assets/dogs/mr.-bubz.jpg'",
         "breed": "Chihuahua mix",
         "sex": "male",
@@ -13,7 +13,7 @@
     },
 
     {
-
+        "owner_id": "2",
         "img": " src= 'Public/assets/dogs/brown-dachshund.jpg'",
         "breed": "Dachshund",
         "sex": "female",
@@ -28,6 +28,7 @@
 
     {
 
+        "owner_id": "3",
         "img": "src = 'Public/assets/dogs/jack-lab.jpg' ",
         "breed": "Jack russel terrier/Labrador mix",
         "sex": "male",
@@ -41,7 +42,7 @@
     },
 
     {
-
+        "owner_id": "4",
         "img": " src='Public/assets/dogs/scrappy.jpg'",
         "breed": "Dachshund Chihuahua mix",
         "sex": "male",
@@ -56,6 +57,7 @@
 
     {
 
+        "owner_id": "5",
         "img": "src='Public/assets/dogs/black_Lab.jpg'",
         "breed": "Black Labrador Retriever",
         "sex": "male",
@@ -67,19 +69,6 @@
         "interests": "staying by master's side"
 
     },
-    {
-
-        "img": " ",
-        "breed": " ",
-        "sex": " ",
-        "name": " ",
-        "age": " ",
-        "color": " ",
-        "size": " ",
-        "temperment": " ", 
-        "interests": " "
-
-    },
 
     {
 
@@ -93,20 +82,6 @@
         "temperment": " ", 
         "interests": " "
 
-    },
-
-    {
-
-        "img": " ",
-        "breed": " ",
-        "sex": " ",
-        "name": " ",
-        "age": " ",
-        "color": " ",
-        "size": " ",
-        "temperment": " ", 
-        "interests": " "  
     }
 
-        
 ]
