@@ -1,18 +1,20 @@
- function petProfile(img, breed, sex, name, age, color, size, temperment) {
-    this.img = img.src;
+ function PetProfile(img, breed, sex, name, age, color, size, temperment, interest) {
+    this.img = img;
     this.breed = breed;
     this.sex = sex;
     this.name = name;
     this.age = age;
     this.color = color;
     this.size = size;
-    this.temperment = temperment
+    this.temperment = temperment;
+    this.interest = interest;
+    this.about = about;
 }
 
-petProfile.all = [];
+PetProfile.all = [];
 
 function addPet(rawData) {
-    petProfile.all.push(new petProfile(rawData));
+    PetProfile.all.push(new petProfile(rawData));
 }
 
 
