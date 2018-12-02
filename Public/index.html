@@ -63,6 +63,42 @@
             <div class="inner">
                 <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </h1>
                 <button>SIGN UP!</button>
+                <div class="signupPopup">
+                    <button class="exitPopup">X</button>
+                    <ul><li>Register</li><li>Login</li></ul>
+                    <div class="register registerForm heroForm active">
+                        <form action="">
+                            <fieldset>
+                                <legend>About You</legend>
+                                <input type="text" placeholder="Username" name="username">
+                                <input type="text" placeholder="Password" name="password">
+                                <input type="text" placeholder="Email" name="email">
+                                <input type="text" placeholder="Address" name="address">
+                            </fieldset>
+                            <fieldset class="petFieldset">
+                                <legend>About Your Pet</legend>
+                                <input type="text" placeholder="Pet Name" name="petname">
+                                <input type="url" placeholder="Pet Image" name="petIMG">
+                                <input type="text" placeholder="Breed" name="breed">
+                                <input type="text" placeholder="Sex" name="sex">
+                                <input type="text" placeholder="Pet Age" name="petage">
+                                <input type="text" placeholder="Pet Color" name="petcolor">
+                                <input type="text" placeholder="Pet Temperment" name="pettemperment">
+                                <input type="text" placeholder="Pet Interest" name="petinterest">
+                                <input type="text" placeholder="Pet Size: Small, Medium, Large" name="petsize">
+                                <input type="text" placeholder="Describe your pet!" name="petabout">
+                            </fieldset>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                    <div class="login loginForm heroForm">
+                        <form action="">
+                            <input type="text" placeholder="Username" name="username">
+                            <input type="text" placeholder="Password" name="password">
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="userProfile">
@@ -102,5 +138,6 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+    <script src="scripts/models/login.js"></script>
 </body>
 </html>
