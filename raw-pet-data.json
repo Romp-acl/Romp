@@ -47,7 +47,7 @@
     {
         "id": "4",
         "owner_id": "4",
-        "imgUrl": " src='Public/assets/dogs/scrappy.jpg'",
+        "imgUrl": "Public/assets/dogs/scrappy.jpg",
         "breed": "Dachshund Chihuahua mix",
         "sex": "male",
         "name": "scrappy",
