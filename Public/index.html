@@ -63,12 +63,10 @@
             <div class="inner">
                 <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </h1>
                 <button>SIGN UP!</button>
-                <div class="loginSignup">
-                    <ul class="heroTabs">
-                        <li style="border-right: 1px solid black;" data-name="signup" class="signup">SIGNUP</li>
-                        <li style="border-left: 1px solid black;" data-name="login" class="login">LOGIN</li>
-                    </ul>
-                    <div class="credentialsForm" data-name="signup">
+                <div class="signupPopup">
+                    <button class="exitPopup">X</button>
+                    <ul><li>Register</li><li>Login</li></ul>
+                    <div class="register registerForm heroForm active">
                         <form action="">
                             <fieldset>
                                 <legend>About You</legend>
@@ -79,26 +77,21 @@
                             </fieldset>
                             <fieldset class="petFieldset">
                                 <legend>About Your Pet</legend>
+                                <input type="text" placeholder="Pet Name" name="petname">
                                 <input type="url" placeholder="Pet Image" name="petIMG">
                                 <input type="text" placeholder="Breed" name="breed">
                                 <input type="text" placeholder="Sex" name="sex">
-                                <input type="text" placeholder="Pet Name" name="petname">
                                 <input type="text" placeholder="Pet Age" name="petage">
                                 <input type="text" placeholder="Pet Color" name="petcolor">
-                                <select>
-                                        <option value="">Pet Size</option>
-                                        <option value="small">Small</option>
-                                        <option value="medium">Medium</option>
-                                        <option value="large">Large</option>
-                                      </select>
                                 <input type="text" placeholder="Pet Temperment" name="pettemperment">
                                 <input type="text" placeholder="Pet Interest" name="petinterest">
-                                <textarea name="petabout" placeholder="Describe your pet!"></textarea>
+                                <input type="text" placeholder="Pet Size: Small, Medium, Large" name="petsize">
+                                <input type="text" placeholder="Describe your pet!" name="petabout">
                             </fieldset>
                             <input type="submit" value="Submit">
                         </form>
                     </div>
-                    <div class="credentialsForm" data-name="login">
+                    <div class="login loginForm heroForm">
                         <form action="">
                             <input type="text" placeholder="Username" name="username">
                             <input type="text" placeholder="Password" name="password">

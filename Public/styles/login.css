@@ -1,57 +1,73 @@
-.loginSignup {
-    height: 0;
-    overflow: hidden;
-    transition: all 0.75s ease-in-out;
-    max-width: 768px;
-    margin: auto;
-    margin-top: 20px;
-    border: 3px solid transparent;
+.signupPopup {
+display: none;
+position: absolute;
+width: 768px;
+justify-content: space-between;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+background-color: rgba(0, 0, 0, 0.9);
+align-items: center;
+padding: 20px;
+box-shadow: 0px 0 10px 5px blueviolet;
 }
-.loginSignup.active {
-    height: 100%;
-    border: 3px solid grey;
-    padding: 20px;
-    background-color: rgba(132, 132, 132, 0.7);
+.signupPopup.active {
+display: block;
 }
-.loginSignup, .heroTabs {
-    display: flex;
-    color: white;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.signupPopup ul {
+display: flex;
+z-index: 2;
+color: white;
+position: relative;
+width: 100%;
+padding: 0;
+list-style: none;
+justify-content: space-between;
 }
-.heroTabs {
-    list-style: none;
-    width: 100%;
-    padding: 0;
+.signupPopup li {
+width: 45%;
+text-align: center;
+padding: 10px;
+border-bottom: 3px solid;
 }
-.heroTabs li {
-    width: 50%;
-    padding: 20px;background-color: #f9f9f9;
-    color: black;
-    box-sizing: border-box;
+.exitPopup {
+position: absolute;
+top: 0;
+right: 0;
+padding: 5px!important;
 }
-.credentialsForm {
-    width: 100%;
+.heroForm {
+z-index: -1;
+opacity: 0;
+transition: all .5s ease-in-out;
 }
-.credentialsForm fieldset {
-    margin-bottom: 20px;
+.heroForm.active {
+z-index: 1;
+opacity: 1;
 }
-.credentialsForm input, .credentialsForm select, .credentialsForm textarea {
-    width: 48%;
-    padding: 14px;
-    height: 60px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    display: inline-block;
+.loginForm {
+position: absolute;
+top: 200px;
+left: 0;
+width: 100%;
 }
-.credentialsForm select {
-    -webkit-appearance: none;
+.loginForm, .registerForm {
+background-color: black;
 }
-.petFieldset input, .petFieldset select, .petFieldset textarea {
-    width: 30%;
+.hero fieldset, .hero h3 {
+color: white;
 }
-.petFieldset textarea {
-    width: 100%;
-    max-width: 700px;
-    height: 200px;
+form input {
+padding: 20px;
+font-size: 20px;
+width: 40%;
+}
+.hero form input[type="submit"] {
+max-width: 200px;
+margin: 20px auto;
+padding: 20px;
+border-radius: 15px;
+background-color: transparent;
+color: white;
+border: 3px solid blueviolet;
 }

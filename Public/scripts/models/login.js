@@ -1,17 +1,8 @@
-$('.hero button').on('click', function(){$('.loginSignup').toggleClass('active')});
-
-$('.heroTabs').on('click', tabSwitcher);
-
-function tabSwitcher(e) {
- var target = e.target.dataset.name;
-    $('.credentialsForm').hide();
-    $(`.credentialsForm[data-name='${target}']`).show();
-
- console.log(e.target);
-
-}
-
-function loadFNs() {
-    $('.credentialsForm').first().next().hide();
-}
-window.addEventListener('load', loadFNs);
+$('.hero button').on('click', function(){$('.signupPopup').toggleClass('active')});
+$('.signupPopup li').on('click', function(e){
+    $('.signupPopup li').css('color', 'white');
+    $(this).css('color', 'yellow');
+    const targetText = e.target.innerText.toLowerCase();
+    $(`.heroForm`).removeClass('active');
+    $(`.${targetText}`).addClass('active');
+})
