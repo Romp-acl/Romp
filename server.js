@@ -46,11 +46,11 @@ function loadPets() {
     client.query('SELECT COUNT(*) FROM pets')
     .then(result => {
         if(!parseInt(result.rows[0].count)) {
-            fs.readFile('raw-user-data.json', (err, fd) => {
+            fs.readFile('raw-pet-data.json', (err, fd) => {
                 JSON.parse(fd.toString()).forEach(pet => {
                     client.query(
-                    `INSERT INTO pets(id, owner_id, img, name, age, breed, sex, color, size, interest, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
-                    [pet.id, pet.owner_id, pet.img, pet.name, pet.age, pet.breed, pet.sex, pet.color, pet.size, pet.interest, pet.description]
+                    `INSERT INTO pets(id, owner_id, imgUrl, name, age, breed, sex, color, size, interest, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
+                    [pet.id, pet.owner_id, pet.imgUrl, pet.name, pet.age, pet.breed, pet.sex, pet.color, pet.size, pet.interest, pet.description]
                     )
                     .catch(console.error);
                 })
@@ -78,7 +78,7 @@ function loadDB() {
         pets (
             id SERIAL PRIMARY KEY,
             owner_id INTEGER,
-            img VARCHAR(255),
+            imgUrl VARCHAR(255),
             name VARCHAR(255),
             age VARCHAR(255),
             breed VARCHAR(255),
