@@ -14,13 +14,19 @@ app.use(express.static('./Public'));
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 
 app.get('/', (request, response) => response.sendFile('./Public/index.html'));
+app.get('/addresses', (request, response) => {
+    client.query(`
+        SELECT address FROM users;
+    `)
+    .then(result => response.send(result.rows))
+    .catch(console.error);
+});
+
 
 loadDB();
 
-
-
 function loadUsers() {
-    client.query('SELECT COUNT(*) FROM articles')
+    client.query('SELECT COUNT(*) FROM users')
     .then(result => {
         if(!parseInt(result.rows[0].count)) {
             fs.readFile('raw-user-data.json', (err, fd) => {
@@ -37,14 +43,14 @@ function loadUsers() {
 }
 
 function loadPets() {
-    client.query('SELECT COUNT(*) FROM articles')
+    client.query('SELECT COUNT(*) FROM pets')
     .then(result => {
         if(!parseInt(result.rows[0].count)) {
             fs.readFile('raw-user-data.json', (err, fd) => {
                 JSON.parse(fd.toString()).forEach(pet => {
                     client.query(
                     `INSERT INTO pets(id, owner_id, img, name, age, breed, sex, color, size, interest, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
-                    [pet.id, pet.owner_id, pet.img, pet.pet_name, pet.species, pet.breed, pet.sex, pet.color, pet.size, pet.interest, pet.description]
+                    [pet.id, pet.owner_id, pet.img, pet.name, pet.age, pet.breed, pet.sex, pet.color, pet.size, pet.interest, pet.description]
                     )
                     .catch(console.error);
                 })
@@ -74,6 +80,7 @@ function loadDB() {
             owner_id INTEGER,
             img VARCHAR(255),
             name VARCHAR(255),
+            age VARCHAR(255),
             breed VARCHAR(255),
             sex VARCHAR(255),
             color VARCHAR(255),

@@ -4,15 +4,14 @@
         "username": "FearAndLoathing",
         "password": "password1",
         "email": "fearandloathing@hotmail.com",
-        "address": "4069 SE Gladstone st."
-        
+        "address": "4069 SE Gladstone st. Portland, OR 97202"
     },
     {
         "id": "2",
         "username": "BMWPeter",
         "password": "password2",
         "email": "bmwpeter@gmail.com",
-        "address": "3945 SE Holgate st."
+        "address": "1025 SE 11th Ave. Portland, OR 97214"
         
     },
     {
@@ -20,7 +19,7 @@
         "username": "Ms.brittany",
         "password": "password3",
         "email": "brit@gmail.com",
-        "address": "1610 SE Belmont st."
+        "address": "1610 SE Belmont st. Portland, OR 97214"
         
     },
     {
@@ -28,16 +27,16 @@
         "username": "Ash&Nick",
         "password": "password4",
         "email": "ash@yahoo.com",
-        "address": "3826 NE Alameda st."
+        "address": "1434 SE Main St. Portland, OR 97214"
         
     },
 
     {
         "id": "5",
-        "username": "Dimitri",
+        "username": "katedam",
         "password": "password5",
         "email": "dimitri@gmail.com",
-        "address": "6180 SE Foster rd."
+        "address": "3600 NE 44th Ave. Portland, OR 97213"
         
     }
 
