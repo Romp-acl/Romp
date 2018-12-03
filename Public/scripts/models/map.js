@@ -6,13 +6,16 @@ function getAddresses() {
             locations.push(user.address);
         });
     })
+    .then(convertLocations);
 }
 
-function convertLocation() {
-    var latLngList = [];    
+var latLngList = [];    
+
+function convertLocations() {
     locations.map(address => {
-        var latLng = $.getJSON(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY`, function(json){
+        $.getJSON(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY`, function(json){
             latLngList.push(json.results[0].geometry.location);
         })
     })
 }
+
