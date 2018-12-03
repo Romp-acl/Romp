@@ -14,9 +14,11 @@ app.use(express.static('./Public'));
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 
 app.get('/', (request, response) => response.sendFile('./Public/index.html'));
-app.get('/addresses', (request, response) => {
+app.get('/petData', (request, response) => {
     client.query(`
-        SELECT address FROM users;
+        SELECT pets.*, users.username, users.address 
+        FROM pets
+        JOIN users ON users.id = pets.owner_id;
     `)
     .then(result => response.send(result.rows))
     .catch(console.error);

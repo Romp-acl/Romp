@@ -4,10 +4,15 @@ function initMap() {
         zoom: 10, 
         center: new google.maps.LatLng(45.5122, -122.6587),
     });
-    getAddresses()
+    getAddresses();
     
-    setTimeout(function()
-        { for (var i=0; i < latLngList.length; i++) {
-            new google.maps.Marker({position: latLngList[i], map: map});
-        }; }, 3000);
-    }
+    setTimeout(function(){ 
+        for (var i=0; i < petsInfo.length; i++) {
+            new google.maps.Marker({
+                position: petsInfo[i].coordinates, 
+                map: map, 
+                title: petsInfo[i].name
+            });
+        };
+    }, 3000);
+}
