@@ -2,7 +2,7 @@
     {
         "id": "1",
         "owner_id": "1",
-        "img": "src= 'Public/assets/dogs/mr.-bubz.jpg'",
+        "imgUrl": "Public/assets/dogs/mr.-bubz.jpg",
         "breed": "Chihuahua mix",
         "sex": "male",
         "name": "Mr. Bubz",
@@ -17,7 +17,7 @@
     {
         "id": "2",
         "owner_id": "2",
-        "img": " src= 'Public/assets/dogs/brown-dachshund.jpg'",
+        "imgUrl": "Public/assets/dogs/brown-dachshund.jpg",
         "breed": "Dachshund",
         "sex": "female",
         "name": "Fritz",
@@ -32,7 +32,7 @@
     {
         "id": "3",
         "owner_id": "3",
-        "img": "src = 'Public/assets/dogs/jack-lab.jpg' ",
+        "imgUrl": "Public/assets/dogs/jack-lab.jpg",
         "breed": "Jack russel terrier/Labrador mix",
         "sex": "male",
         "name": "Jack",
@@ -47,7 +47,7 @@
     {
         "id": "4",
         "owner_id": "4",
-        "img": " src='Public/assets/dogs/scrappy.jpg'",
+        "imgUrl": "Public/assets/dogs/scrappy.jpg",
         "breed": "Dachshund Chihuahua mix",
         "sex": "male",
         "name": "scrappy",
@@ -62,7 +62,7 @@
     {
         "id": "5",
         "owner_id": "5",
-        "img": "src='Public/assets/dogs/black_Lab.jpg'",
+        "imgUrl": "Public/assets/dogs/black_Lab.jpg",
         "breed": "Black Labrador Retriever",
         "sex": "male",
         "name": "Vlad",
@@ -71,21 +71,6 @@
         "size": "large",
         "temperment": "calm", 
         "interests": "staying by master's side",
-        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
-    },
-
-    {
-        "id": "",
-        "owner_id": "",
-        "img": " ",
-        "breed": " ",
-        "sex": " ",
-        "name": " ",
-        "age": " ",
-        "color": " ",
-        "size": " ",
-        "temperment": " ", 
-        "interests": " ",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     }
 
