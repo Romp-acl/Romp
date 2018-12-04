@@ -13,9 +13,11 @@
 
 PetProfile.all = [];
 
-function addPet(rawData) {
-    PetProfile.all.push(new petProfile(rawData));
-}
+
+
+// function addPet(rawData) {
+//     PetProfile.all.push(new petProfile(rawData));
+// }
 
 
 

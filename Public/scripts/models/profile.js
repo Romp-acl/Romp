@@ -1,15 +1,31 @@
-function UserProfile(username, password, email, address) {
-    this.username = username;
-    this.password = password;
-    this.email = email;
-    this.address = address;
+function UserProfile(user) {
+    this.username = user.username;
+    this.password = user.password;
+    this.email = user.email;
+    this.address = user.address;
 }
 
 UserProfile.all = [];
 
-function addUser(rawData) {
-    UserProfile.all.push(new UserProfile(rawData));
+UserProfile.loadUsers = function() {
+    $.getJSON("/userData", function(json) {
+        json.map(user => {
+            UserProfile.all.push(new UserProfile(user));
+        });
+    })
 }
+
+UserProfile.prototype.toHtml = function() {
+    var templateFiller = Handlebars.compile($('#user-profile').html());
+    var filledTemplate = templateFiller(this);
+    return filledTemplate;
+}
+
+// function addUser(rawData) {
+//     UserProfile.all.push(new UserProfile(rawData));
+// }
+
+
 
 
 

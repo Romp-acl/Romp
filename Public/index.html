@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="styles/main.css">
     <script id="user-profile" type="text/x-handlebars-template">
         <div class="inner">
-            <div class="profileSidebar">
+            <!-- <div class="profileSidebar">
                 <ul>
                     <li>{{pet1}}</li>
                     <li>{{pet2}}</li>
                     <li>{{pet3}}</li>
                 </ul>
-            </div>
+            </div> -->
             <div class="petProfile">
                 <section class="petInfoAndIMG">
                     <img src="{{img}}" alt="" class="petIMG">
@@ -69,8 +69,8 @@
                         <form action="">
                             <fieldset>
                                 <legend>About You</legend>
-                                <input type="text" placeholder="Username" name="username">
-                                <input type="text" placeholder="Password" name="password">
+                                <input type="text" placeholder="Username" name="new-username">
+                                <input type="text" placeholder="Password" name="new-password">
                                 <input type="text" placeholder="Email" name="email">
                                 <input type="text" placeholder="Address" name="address">
                             </fieldset>
@@ -94,14 +94,14 @@
                         <form action="">
                             <input type="text" placeholder="Username" name="username">
                             <input type="text" placeholder="Password" name="password">
-                            <input type="submit" value="Submit">
+                            <input type="button" value="Submit" id="loginBtn">
                         </form>
                     </div>
                 </div>
             </div>
         </section>
         <section class="userProfile">
-            <div class="inner">
+            <!-- <div class="inner">
                 <div class="profileSidebar">
                     <ul>
                         <li>Tupug</li>
@@ -127,10 +127,9 @@
                     <input type="checkbox" name="filter" id="black" class="chk-btn">
                     <label for="Black">Black</label> 
                     <div class="map">
-                        <!-- <img src="https://media.istockphoto.com/vectors/paris-vector-city-map-vector-id984847490?k=6&m=984847490&s=612x612&w=0&h=j0Zay98FYqVtfx-F4SfnlXayx5AzBHhyd6XgB7vxOn0=" alt=""> -->
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
     </main>
     <footer></footer>
@@ -139,6 +138,10 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+    <script src="scripts/models/profile.js"></script>
+    <script src="scripts/views/profileView.js"></script>
+    <script src="scripts/controllers/profileController.js"></script>
+    <script src="scripts/models/login.js"></script>
     <script src="scripts/controllers/mapController.js"></script>
     <script src="scripts/models/map.js"></script>
     <script src="scripts/views/mapView.js"></script>
@@ -146,6 +149,6 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY&callback=initMap">
     </script>
 
-    <script src="scripts/models/login.js"></script>
+    
 </body>
 </html>

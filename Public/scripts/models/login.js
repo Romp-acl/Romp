@@ -6,3 +6,18 @@ $('.signupPopup li').on('click', function(e){
     $(`.heroForm`).removeClass('active');
     $(`.${targetText}`).addClass('active');
 })
+
+var $username = "";
+var $password = "";
+function userLogin() {
+    $('#loginBtn').on('click', function() {
+        $username = $("input[name='username']").val();
+        $password = $("input[name='password']").val();
+        UserProfile.all.map(user => {
+            if ($username == user.username && $password == user.password) {
+                $('.userProfile').append(user.toHtml());
+            }
+        });
+    });
+}
+

@@ -24,6 +24,15 @@ app.get('/petData', (request, response) => {
     .catch(console.error);
 });
 
+app.get('/userData', (request, response) => {
+    client.query(`
+    SELECT * FROM users
+    JOIN pets
+    ON users.id = pets.owner_id;
+    `)
+    .then(result => response.send(result.rows))
+    .catch(console.error);
+});
 
 loadDB();
 
