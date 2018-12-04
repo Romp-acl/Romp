@@ -9,8 +9,6 @@ function getAddresses() {
     .then(convertLocations);
 }
 
-var latLngList = [];    
-
 function convertLocations() {
     petsInfo.map(pet => {
         $.getJSON(`https://maps.googleapis.com/maps/api/geocode/json?address=${pet['address']}&key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY`, function(json){
@@ -18,4 +16,5 @@ function convertLocations() {
         })
     })
 }
+
 
