@@ -41,9 +41,9 @@
 .msgBoard, .map {
     width: 45%;
 }
-.msgBoard {
+/* .msgBoard {
     border: 1px solid black;
-}
+} */
 
 .clearfix {
     clear: both;
