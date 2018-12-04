@@ -2,6 +2,7 @@ var petsInfo = [];
 
 function getAddresses() {
     var addresses = $.getJSON("/petData", function(json) {
+        console.log(json);
         json.map(user => {
             petsInfo.push(user);
         });

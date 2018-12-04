@@ -44,3 +44,84 @@
 .msgBoard {
     border: 1px solid black;
 }
+
+.clearfix {
+    clear: both;
+}
+
+.msgBoard h2, p, textarea, li, button {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.msgBoard header h2{
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+    font-size: 1em;
+    text-align: center;
+}
+
+.msgBoard textarea {
+    width: 96%;
+    height: 70px;
+    padding : 5px;
+    outline: none;
+    font-size: 80%;
+    resize: vertical;
+    margin: 2px;
+    margin-bottom: 20px;
+    border: 1px solid #0EBFE9;
+    border-bottom: 4px solid #63D1F4;
+}
+
+.msgBoard p {
+    float: left;
+    line-height: 30px;
+}
+
+.msgBoard span {
+    font-weight: bold;
+}
+
+.msgBoard button {
+    border: 0;
+    width: 30%;
+    color: #fff;
+	height: 35px;
+	float: right;
+	outline: none;
+	cursor: pointer;
+	font-weight: 700;
+	background-color: #0EBFE9;
+	border-bottom: 3px solid #63D1F4;
+}
+.msgBoard button:hover {
+	background-color: #0099CC;
+	border-bottom: 3px solid #00688B;
+}
+
+.msgBoard button:disabled {
+	background-color: #d3d3d3 ;
+	border-bottom: 3px solid #d3d3d3;
+}
+
+.msgBoard ul {
+	margin-top: 60px;
+	list-style: none;
+	padding-left: 0px;
+}
+
+.msgBoard ul li {
+	padding: 10px 10px;
+    word-wrap: break-word;
+	border-bottom: 3px solid #63D1F4;
+}
+
+.msgBoard ul li:hover {
+	border-bottom: 3px solid #00688B;
+}
+
