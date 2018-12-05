@@ -16,5 +16,11 @@
         "commenter_id" : "5",
         "comment_text" : "Yasss, let's meet at Laurelhurst Park",
         "profile_id" : "5"
+    },
+    {
+        "id" : "4",
+        "commenter_id" : "5",
+        "comment_text" : "Hello, I'm looking for a dog-sitter - email me!",
+        "profile_id" : "1"
     }
 ]

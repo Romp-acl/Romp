@@ -10,6 +10,7 @@ $('.hero button').on('click', function(){
 })
 
 var $username = "";
+var $loginID = "";
 var $password = "";
 function userLogin() {
     $('#loginBtn').on('click', function() {
@@ -17,11 +18,13 @@ function userLogin() {
         $password = $("input[name='password']").val();
         UserProfile.all.map(user => {
             if ($username == user.username && $password == user.password) {
+                $loginID = user.id; 
                 $('.userProfile').prepend(user.toHtml());
                 $('.hero').hide();
                 $('userProfile').show();
-                initMsgBoard();
                 initMap();
+                initMsgBoard();
+                addPrevComments();
             }
         });
     });

@@ -16,7 +16,7 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 app.get('/', (request, response) => response.sendFile('./Public/index.html'));
 app.get('/petData', (request, response) => {
     client.query(`
-        SELECT pets.*, users.username, users.address 
+        SELECT pets.*, users.id, users.username, users.address 
         FROM pets
         JOIN users ON users.id = pets.owner_id;
     `)
@@ -43,6 +43,16 @@ app.get('/msgBoardData', (request, response) => {
     .then(result => response.send(result.rows))
     .catch(console.error);
 })
+
+// app.get('/msgBoardProfile', (request, response) => {
+//     client.query(`
+//     SELECT comments.*, users.username 
+//     FROM comments
+//     JOIN users ON comments.commenter_id = users.id;
+//     `)
+//     .then(result => response.send(result.rows))
+//     .catch(console.error);
+// })
 
 app.post('/userComment', (requeset, response) => {
     client.query(`
