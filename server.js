@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = 'postgres://postgres:Simplepassword!@localhost:5432/postgres';
+const conString = 'postgres://localhost:5432';
 const client = new pg.Client(conString);
 
 client.connect();
@@ -24,6 +24,35 @@ app.get('/petData', (request, response) => {
     .catch(console.error);
 });
 
+app.post('/regForm', (request, response) => {
+    client.query(
+        `INSERT INTO users(username, password, email, address) VALUES($1, $2, $3, $4) ON CONFLICT DO NOTHING`,
+        [request.body.username, request.body.password, request.body.email, request.body.address]
+    )
+    .then(() => {
+        client.query(`
+        INSERT INTO
+        pets(owner_id, imgUrl, breed, sex, name, age, color, size, temperment, interests, description)
+        VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+        `,
+        [
+            request.body.owner_id,
+            request.body.imgUrl,
+            request.body.breed,
+            request.body.sex,
+            request.body.name,
+            request.body.age,
+            request.body.color,
+            request.body.size,
+            request.body.temperment,
+            request.body.interests,
+            request.body.description
+        ]
+        )
+    })
+    .then(() => response.send('Insert complete'))
+    .catch(console.error);
+})
 
 loadDB();
 
