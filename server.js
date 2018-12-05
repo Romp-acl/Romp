@@ -24,6 +24,15 @@ app.get('/petData', (request, response) => {
     .catch(console.error);
 });
 
+app.get('/userData', (request, response) => {
+    client.query(`
+    SELECT * FROM users
+    JOIN pets
+    ON users.id = pets.owner_id;
+    `)
+    .then(result => response.send(result.rows))
+    .catch(console.error);
+});
 
 loadDB();
 
@@ -51,8 +60,8 @@ function loadPets() {
             fs.readFile('raw-pet-data.json', (err, fd) => {
                 JSON.parse(fd.toString()).forEach(pet => {
                     client.query(
-                    `INSERT INTO pets(id, owner_id, imgUrl, name, age, breed, sex, color, size, interest, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
-                    [pet.id, pet.owner_id, pet.imgUrl, pet.name, pet.age, pet.breed, pet.sex, pet.color, pet.size, pet.interest, pet.description]
+                    `INSERT INTO pets(id, owner_id, imgUrl, name, age, breed, sex, color, size, interests, temperment, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,
+                    [pet.id, pet.owner_id, pet.imgUrl, pet.name, pet.age, pet.breed, pet.sex, pet.color, pet.size, pet.temperment, pet.interests,  pet.description]
                     )
                     .catch(console.error);
                 })
@@ -87,7 +96,8 @@ function loadDB() {
             sex VARCHAR(255),
             color VARCHAR(255),
             size VARCHAR(255),
-            interest VARCHAR(255),
+            temperment VARCHAR(255),
+            interests VARCHAR(255),
             description VARCHAR(255)
         );`
     )
