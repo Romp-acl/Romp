@@ -28,6 +28,7 @@
 }
 
 .signupPopup li {
+    cursor: pointer;
     width: 45%;
     text-align: center;
     padding: 10px;
@@ -84,5 +85,5 @@ form input {
 }
 
 .hero form input:hover {
-    cursor: pointer;
+    cursor: text;
 }

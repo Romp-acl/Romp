@@ -127,7 +127,7 @@
                 <section class="filter">
                     <div class="bgOverlay"></div>
                     <div class="inner">
-                        <button>Filter!</button>
+                        <button>Filter</button>
                         <div class="filterPopup">
                             <button class="exitPopup">X</button>
                             <div class="register registerForm heroForm active">
@@ -135,8 +135,23 @@
                                     <fieldset class="petFieldset">
                                         <legend>Filter Pets</legend>
                                         <input type="text" placeholder="Breed" name="breed">
-                                        <input type="radio" name="gender" value="male">Male<br>
-                                        <input type="radio" name="gender" value="female">Female<br>
+                                        <div id="gender">
+                                            <legend>Gender</legend>
+                                            <input type="radio" name="gender" value="male">Male<br>
+                                            <input type="radio" name="gender" value="female">Female<br>
+                                        </div>
+                                        <div id="size">
+                                            <legend>Size</legend>
+                                            <input type="radio" name="size" value="small">Small<br>
+                                            <input type="radio" name="size" value="medium">Medium<br>
+                                            <input type="radio" name="size" value="large">Large<br>
+                                        </div>
+                                        <div id="interests">
+                                            <legend>Interests</legend>
+                                            <input type="checkbox" name="training" value="training">Training<br>
+                                            <input type="checkbox" name="breeding" value="breeding">Breeding<br>
+                                            <input type="checkbox" name="playtime" value="playtime">Playtime<br>
+                                        </div>
                                     </fieldset>
                                     <button class="apply">Apply Filters</button>
                                 </form>
