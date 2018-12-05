@@ -1,9 +1,9 @@
 
-$(document).ready(function() {
-    $('button').click(function() {
+function initMsgBoard() {
+    $('#postComment').on('click', function() {
         var $comment = $('.commentBox').val();
-        $('<li>').text($comment).prependTo('.comments');
-        $('button').attr('disabled', 'true');
+        $('<li>').text(`${$username}: ${$comment}`).prependTo('.comments');
+        $('#postComment').attr('disabled', 'true');
         $('.counter').text('140');
         $('.commentBox').val('');
     })
@@ -12,13 +12,13 @@ $(document).ready(function() {
         var charLeft = 140 - commentLength;
         $('.counter').text(charLeft);
         if(commentLength == 0) {
-            $('button').attr('disabled', 'true');
+            $('#postComment').attr('disabled', 'true');
         } else if (commentLength > 140) {
-            $('button').attr('disabled', 'true');
+            $('#postComment').attr('disabled', 'true');
         }
         else {
-            $('button').removeAttr('disabled', 'true');
+            $('#postComment').removeAttr('disabled', 'true');
         }
     })
-    $('button').attr('disabled', 'true');
-})
+    $('#postComment').attr('disabled', 'true');
+}
