@@ -7,30 +7,39 @@
     <link rel="stylesheet" href="styles/main.css">
     <script id="user-profile" type="text/x-handlebars-template">
         <div class="inner">
-            <div class="profileSidebar">
+            <!-- <div class="profileSidebar">
                 <ul>
                     <li>{{pet1}}</li>
                     <li>{{pet2}}</li>
                     <li>{{pet3}}</li>
                 </ul>
-            </div>
+            </div> -->
             <div class="petProfile">
                 <section class="petInfoAndIMG">
-                    <img src="{{img}}" alt="" class="petIMG">
+                    <img src="{{petObj.imgUrl}}" class="petIMG">
                     <aside class="petInfo">
-                        <h2>{{name}}</h2>
+                        <h1>{{username}}</h1>
+                        <h2>{{petObj.name}}</h2>
                         <ul>
-                            <li>Breed: {{breed}}</li>
-                            <li>Gender: {{sex}}</li>
-                            <li>Color: {{color}}</li>
-                            <li>Age: {{age}}</li>
-                            <li>Personality: {{temperment}}</li>
-                            <li>Looking for: {{interest}}</li>
+                            <li>Breed: {{petObj.breed}}</li>
+                            <li>Gender: {{petObj.sex}}</li>
+                            <li>Color: {{petObj.color}}</li>
+                            <li>Age: {{petObj.age}}</li>
+                            <li>Personality: {{petObj.temperment}}</li>
+                            <li>Looking for: {{petObj.interests}}</li>
                         </ul>
                     </aside>
                 </section>
                 <div class="petDesc"><h3>About:</h3><p>{{about}}</p></div>
-                <div class="msgBoard"></div>
+                <div class="msgBoard">
+                    <header>
+                        <h2>Leave a comment to connect with me</h2>
+                    </header>
+                    <textarea class="commentBox" placeholder="Say hi!" type="textarea"></textarea>
+                    <p><span class="counter">140</span> Characters left</p>
+                    <button id="postComment">Post</button>
+                    <ul class="clearfix comments"></ul>
+                </div>
                 <div class="map">   
                 </div>
             </div>
@@ -69,8 +78,8 @@
                         <form action="">
                             <fieldset>
                                 <legend>About You</legend>
-                                <input type="text" placeholder="Username" name="username">
-                                <input type="text" placeholder="Password" name="password">
+                                <input type="text" placeholder="Username" name="new-username">
+                                <input type="text" placeholder="Password" name="new-password">
                                 <input type="text" placeholder="Email" name="email">
                                 <input type="text" placeholder="Address" name="address">
                             </fieldset>
@@ -94,7 +103,7 @@
                         <form action="">
                             <input type="text" placeholder="Username" name="username">
                             <input type="text" placeholder="Password" name="password">
-                            <input type="submit" value="Submit">
+                            <input type="button" value="Submit" id="loginBtn">
                         </form>
                     </div>
                 </div>
@@ -172,11 +181,16 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+    <script src="scripts/models/profile.js"></script>
+    <script src="scripts/views/profileView.js"></script>
+    <script src="scripts/controllers/profileController.js"></script>
+    <script src="scripts/models/login.js"></script>
     <script src="scripts/controllers/mapController.js"></script>
     <script src="scripts/models/map.js"></script>
     <script src="scripts/views/mapView.js"></script>
+    <script src="scripts/views/profileView.js"></script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY">
     </script>
     <script src="scripts/models/login.js"></script>
     <script src="scripts/models/filter.js"></script>

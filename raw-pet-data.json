@@ -62,7 +62,7 @@
     {
         "id": "5",
         "owner_id": "5",
-        "imgUrl": "Public/assets/dogs/black_Lab.jpg",
+        "imgUrl": "assets/dogs/black_Lab.jpg",
         "breed": "Black Labrador Retriever",
         "sex": "male",
         "name": "Vlad",
