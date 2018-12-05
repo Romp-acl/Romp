@@ -14,6 +14,39 @@ app.use(express.static('./Public'));
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 
 app.get('/', (request, response) => response.sendFile('./Public/index.html'));
+
+
+
+app.post('/regForm', (request, response) => {
+    client.query(
+        `INSERT INTO users(username, password, email, address) VALUES($1, $2, $3, $4) ON CONFLICT DO NOTHING`,
+        [request.body.username, request.body.password, request.body.email, request.body.address]
+    )
+    .then(() => {
+        client.query(`
+        INSERT INTO
+        pets(owner_id, imgUrl, breed, sex, name, age, color, size, temperment, interests, description)
+        VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+        `,
+        [
+            request.body.owner_id,
+            request.body.imgUrl,
+            request.body.breed,
+            request.body.sex,
+            request.body.name,
+            request.body.age,
+            request.body.color,
+            request.body.size,
+            request.body.temperment,
+            request.body.interests,
+            request.body.description
+        ]
+        )
+    })
+    .then(() => response.send('Insert complete'))
+    .catch(console.error);
+})
+
 app.get('/petData', (request, response) => {
     client.query(`
         SELECT pets.*, users.username, users.address 
