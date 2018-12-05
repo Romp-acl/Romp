@@ -44,9 +44,9 @@ app.get('/msgBoardData', (request, response) => {
     .catch(console.error);
 })
 
-app.post('/userComment', (requeset, response) => {
+app.post('/userComment', (request, response) => {
     client.query(
-        `INSERT INTO comments(commenter_id, comment_text, profile_id)
+        `INSERT INTO comments(commenter_id, comment_text, profile_id) ON CONFLICT DO NOTHING
         VALUES($1, $2, $3)`,
         [
             request.body.commenter_id,
