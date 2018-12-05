@@ -1,6 +1,7 @@
 
 function initMsgBoard() {
     $('#postComment').on('click', function() {
+        submitComment();
         var $comment = $('.commentBox').val();
         $('<li>').text(`${$username}: ${$comment}`).prependTo('.comments');
         $('#postComment').attr('disabled', 'true');

@@ -44,20 +44,18 @@ app.get('/msgBoardData', (request, response) => {
     .catch(console.error);
 })
 
-// app.get('/msgBoardProfile', (request, response) => {
-//     client.query(`
-//     SELECT comments.*, users.username 
-//     FROM comments
-//     JOIN users ON comments.commenter_id = users.id;
-//     `)
-//     .then(result => response.send(result.rows))
-//     .catch(console.error);
-// })
-
 app.post('/userComment', (requeset, response) => {
-    client.query(`
-        
-    `)
+    client.query(
+        `INSERT INTO comments(commenter_id, comment_text, profile_id)
+        VALUES($1, $2, $3)`,
+        [
+            request.body.commenter_id,
+            request.body.comment_text,
+            request.body.profile_id,
+        ]
+    )
+    .then(() => response.send('Insert complete'))
+    .catch(console.error);
 })
 
 loadDB();
