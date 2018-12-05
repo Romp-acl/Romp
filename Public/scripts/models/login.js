@@ -15,7 +15,9 @@ function userLogin() {
         $password = $("input[name='password']").val();
         UserProfile.all.map(user => {
             if ($username == user.username && $password == user.password) {
-                $('.userProfile').append(user.toHtml());
+                $('.userProfile').prepend(user.toHtml());
+                $('.hero').hide();
+                $('userProfile').show();
             }
         });
     });

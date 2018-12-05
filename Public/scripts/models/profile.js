@@ -3,6 +3,18 @@ function UserProfile(user) {
     this.password = user.password;
     this.email = user.email;
     this.address = user.address;
+    this.petObj = {
+        img : user.imgUrl,
+        breed : user.breed,
+        sex : user.sex,
+        name : user.name,
+        age : user.age,
+        color : user.color,
+        size : user.size,
+        temperment : user.temperment,
+        interests : user.interests,
+        about : user.description
+    }
 }
 
 UserProfile.all = [];
