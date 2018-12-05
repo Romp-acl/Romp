@@ -18,6 +18,7 @@
                 <section class="petInfoAndIMG">
                     <img src="{{petObj.imgUrl}}" class="petIMG">
                     <aside class="petInfo">
+                        <h1>{{username}}</h1>
                         <h2>{{petObj.name}}</h2>
                         <ul>
                             <li>Breed: {{petObj.breed}}</li>
@@ -29,9 +30,18 @@
                         </ul>
                     </aside>
                 </section>
-                <div class="petDesc"><h3>About:</h3><p>{{petObj.about}}</p></div>
-                <div class="msgBoard"></div> 
-                <div class="map"></div>  
+                <div class="petDesc"><h3>About:</h3><p>{{about}}</p></div>
+                <div class="msgBoard">
+                    <header>
+                        <h2>Leave a comment to connect with me</h2>
+                    </header>
+                    <textarea class="commentBox" placeholder="Say hi!" type="textarea"></textarea>
+                    <p><span class="counter">140</span> Characters left</p>
+                    <button id="postComment">Post</button>
+                    <ul class="clearfix comments"></ul>
+                </div>
+                <div class="map">   
+                </div>
             </div>
         </div>
     </script>
@@ -115,8 +125,9 @@
     <script src="scripts/controllers/mapController.js"></script>
     <script src="scripts/models/map.js"></script>
     <script src="scripts/views/mapView.js"></script>
+    <script src="scripts/views/profileView.js"></script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY">
     </script>
 
     

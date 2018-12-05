@@ -4,7 +4,7 @@ function UserProfile(user) {
     this.email = user.email;
     this.address = user.address;
     this.petObj = {
-        img : user.imgUrl,
+        imgUrl : user.imgUrl,
         breed : user.breed,
         sex : user.sex,
         name : user.name,
