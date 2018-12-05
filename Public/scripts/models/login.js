@@ -21,6 +21,7 @@ function userLogin() {
                 $('.hero').hide();
                 $('userProfile').show();
                 initMsgBoard();
+                initMap();
             }
         });
     });
