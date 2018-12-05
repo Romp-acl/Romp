@@ -34,7 +34,39 @@ app.get('/userData', (request, response) => {
     .catch(console.error);
 });
 
+app.get('/msgBoardData', (request, response) => {
+    client.query(`
+    SELECT comments.*, users.username 
+    FROM comments
+    JOIN users ON comments.commenter_id = users.id;
+    `)
+    .then(result => response.send(result.rows))
+    .catch(console.error);
+})
+
+app.post('/userComment', (requeset, response) => {
+    client.query(`
+        
+    `)
+})
 loadDB();
+
+function loadComments() {
+    client.query('SELECT COUNT(*) FROM users')
+    .then(result => {
+        if(!parseInt(result.rows[0].count)) {
+            fs.readFile('raw-comments-data.json', (err, fd) => {
+                JSON.parse(fd.toString()).forEach(comment => {
+                    client.query(
+                        `INSERT INTO comments(id, commenter_id, comment_text, profile_id) VALUES ($1, $2, $3, $4)`,
+                        [comment.id, comment.commenter_id, comment.comment_text, comment.profile_id]
+                    )
+                    .catch(console.error);
+                })
+            })
+        }
+    })
+}
 
 function loadUsers() {
     client.query('SELECT COUNT(*) FROM users')
@@ -103,4 +135,18 @@ function loadDB() {
     )
     .then(loadPets)
     .catch(console.error);
+
+    client.query(`
+        CREATE TABLE IF NOT EXISTS
+        comments (
+            id SERIAL PRIMARY KEY,
+            commenter_id INTEGER,
+            comment_text VARCHAR(140),
+            profile_id INTEGER
+        );`
+    )
+    .then(loadComments)
+    .catch(console.error);
 }
+
+//profile_id is the profile page and commenter_id is the user who is logged in && leaving the comment

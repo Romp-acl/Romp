@@ -1,0 +1,20 @@
+[
+    {
+        "id" : "1",
+        "commenter_id" : "4",
+        "comment_text" : "Hello, let's get together for a doggie playdate!",
+        "profile_id" : "5"
+    },
+    {
+        "id" : "2",
+        "commenter_id" : "3",
+        "comment_text" : "Can I hang too? email me!",
+        "profile_id" : "5"
+    },
+    {
+        "id" : "3",
+        "commenter_id" : "5",
+        "comment_text" : "Yasss, let's meet at Laurelhurst Park",
+        "profile_id" : "5"
+    }
+]
