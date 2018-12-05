@@ -33,10 +33,6 @@ UserProfile.prototype.toHtml = function() {
     return filledTemplate;
 }
 
-// function addUser(rawData) {
-//     UserProfile.all.push(new UserProfile(rawData));
-// }
-
 
 
 

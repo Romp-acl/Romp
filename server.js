@@ -49,10 +49,11 @@ app.post('/userComment', (requeset, response) => {
         
     `)
 })
+
 loadDB();
 
 function loadComments() {
-    client.query('SELECT COUNT(*) FROM users')
+    client.query('SELECT COUNT(*) FROM comments')
     .then(result => {
         if(!parseInt(result.rows[0].count)) {
             fs.readFile('raw-comments-data.json', (err, fd) => {

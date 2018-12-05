@@ -1,15 +1,19 @@
-function Comment(comment) {
+function UserComment(comment) {
     this.commenter_id = comment.commenter_id;
     this.comment_text = comment.comment_text;
     this.profile_id = comment.profile_id
 }
 
-Comment.all = [];
+UserComment.all = [];
 
-Comment.loadComments = function() {
+UserComment.loadComments = function() {
     $.getJSON("/msgBoardData", function(json) {
         json.map(comment => {
-            UserProfile.all.push(new Comment(comment));
+            UserComment.all.push(new UserComment(comment));
         });
     })
+}
+
+function addComments() {
+    
 }
