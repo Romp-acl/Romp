@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: 'Mallanna', sans-serif;
 }
 header {
     background-color: blueviolet;
@@ -25,6 +26,11 @@ header img {
 .tagline h1, .tagline p {
     margin: 0;
     margin-left: 10px;
+    color: white;
+}
+.tagline h1 {
+    font-family: 'Knewave', cursive;
+    font-size: 4em;
 }
 header ul {
     list-style: none;
@@ -51,7 +57,7 @@ header ul li {
     background-color: black;
     opacity: 0.75;
 }
-.hero h1, .hero button {
+.hero h1, .hero h2, .hero button {
     color: white;
     font-size: 2.5em;
 }

@@ -29,6 +29,8 @@ width: 45%;
 text-align: center;
 padding: 10px;
 border-bottom: 3px solid;
+color: white;
+cursor: pointer;
 }
 .exitPopup {
 position: absolute;
@@ -70,4 +72,8 @@ border-radius: 15px;
 background-color: transparent;
 color: white;
 border: 3px solid blueviolet;
+cursor: pointer;
+}
+form input[type='button'] {
+    cursor: pointer;
 }
