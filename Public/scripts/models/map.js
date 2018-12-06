@@ -2,14 +2,12 @@ var petsInfo = [];
 
 function getAddresses() {
     var addresses = $.getJSON("/petData", function(json) {
-        json.map(user => {
-            petsInfo.push(user);
+        json.map(pet => {
+            petsInfo.push(pet);
         });
     })
     .then(convertLocations);
 }
-
-var latLngList = [];    
 
 function convertLocations() {
     petsInfo.map(pet => {
@@ -18,4 +16,5 @@ function convertLocations() {
         })
     })
 }
+
 
