@@ -158,4 +158,3 @@ function loadDB() {
     .catch(console.error);
 }
 
-//profile_id is the profile page and commenter_id is the user who is logged in && leaving the comment
