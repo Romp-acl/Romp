@@ -109,10 +109,14 @@
                 </div>
             </div>
         </section>
-        <section class="userProfile">
+        <div class="hideOnMarkerClick">
+            <div class="map"></div>
+        </div>
+        <section class="userProfile hide">
         </section>
     </main>
     <footer></footer>
+    
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -127,7 +131,11 @@
     <script src="scripts/views/mapView.js"></script>
     <script src="scripts/views/profileView.js"></script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY"></script>
+    <script type="text/javascript">
+    setTimeout(() => {
+        initMap();
+    }, 500);
     </script>
 
     
