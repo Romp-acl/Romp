@@ -19,6 +19,7 @@ function initMap() {
                     sex: petsInfo[i].sex,
                     age: petsInfo[i].age,
                     img: petsInfo[i].imgurl.split('Public/')[1],
+                    category: [petsInfo[i].color, petsInfo[i].sex, petsInfo[i].size]
                 }
             }));
         };
@@ -47,6 +48,7 @@ function initMap() {
         });
         infowindow.open(map, this);
     }
+
 }
 
 
@@ -107,5 +109,27 @@ function viewProfileBTN(id) {
 function filterMarkers() {
     for (var i = 0; i < filter.length; i++) {
         setVisible();
+    }
+}
+
+
+
+
+function updateView(element) {
+    if (element) {
+      //Get array with names of the checked boxes
+      var checkedBoxes = ([...document.querySelectorAll('input[type=checkbox]:checked')]).map(function(option) { return option.value; });
+      console.log(checkedBoxes);
+      for (var i = 0; i < markers.length; i++) {
+        console.log(markers[i].properties.category);
+        //Filter to show any markets containing ALL of the selected options
+        if(typeof markers[i].properties.category == 'object' && checkedBoxes.every(function (option) {
+        return (markers[i].properties.category).indexOf(option) >= 0;})){
+            markers[i].setVisible(true);
+        }
+        else {
+            markers[i].setVisible(false);
+        }
+      }
     }
 }

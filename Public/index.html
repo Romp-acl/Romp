@@ -110,6 +110,19 @@
             </div>
         </section>
         <div class="hideOnMarkerClick">
+                <div id="options">
+                    <h3>Filter By:</h3>
+                    <h4>Color</h4>
+                    <input type="checkbox" value="Black" onchange="updateView(this);"/> black
+                    <input type="checkbox" value="white" onchange="updateView(this);"/> white
+                    <h4>Gender</h4>
+                    <input type="checkbox" value="male" onchange="updateView(this);"/> male
+                    <input type="checkbox" value="female" onchange="updateView(this);"/> female
+                    <h4>Size</h4>
+                    <input type="checkbox" value="small" onchange="updateView(this);"/> small
+                    <input type="checkbox" value="medium" onchange="updateView(this);"/> Medium
+                    <input type="checkbox" value="large" onchange="updateView(this);"/> Large
+                </div>
             <div class="map"></div>
         </div>
         <section class="userProfile hide">
