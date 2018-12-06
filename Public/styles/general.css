@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: 'Mallanna', sans-serif;
 }
 
 header {
@@ -31,6 +32,11 @@ header img {
 .tagline h1, .tagline p {
     margin: 0;
     margin-left: 10px;
+    color: white;
+}
+.tagline h1 {
+    font-family: 'Knewave', cursive;
+    font-size: 4em;
 }
 
 header ul {
