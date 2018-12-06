@@ -16,7 +16,14 @@ UserComment.loadComments = function() {
 }
 
 UserComment.prototype.insertComment = function() {
-    $.post('/userComment', {commenter_id : this.commenter_id, comment_text : this.comment_text, profile_id : this.profile_id})
+    const newComment = {
+        commenter_id: this.commenter_id,
+        username: this.username, 
+        comment_text: this.comment_text, 
+        profile_id: this.profile_id
+    }
+    console.log(newComment);
+    $.post('/userComment', newComment)
     .then(console.log)
 };
 
@@ -33,8 +40,9 @@ function addPrevComments() {
 function submitComment() {
     let newComment = new UserComment({
         commenter_id: $loginID,
+        username: $username,
         comment_text: $('.commentBox').val(),
-        profile_id: 0,
+        profile_id: 0
     })
     console.log(newComment);
     newComment.insertComment();

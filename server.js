@@ -8,7 +8,11 @@ const conString = 'postgres://localhost:5432';
 const client = new pg.Client(conString);
 
 client.connect();
+
 client.on('error', err => console.error(err));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static('./Public'));
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
@@ -45,13 +49,15 @@ app.get('/msgBoardData', (request, response) => {
 })
 
 app.post('/userComment', (request, response) => {
+    console.log(request.body);
     client.query(
-        `INSERT INTO comments(commenter_id, comment_text, profile_id) ON CONFLICT DO NOTHING
-        VALUES($1, $2, $3)`,
+        `INSERT INTO comments(commenter_id, username, comment_text, profile_id)
+        VALUES($1, $2, $3, $4)`,
         [
             request.body.commenter_id,
+            request.body.username,
             request.body.comment_text,
-            request.body.profile_id,
+            request.body.profile_id
         ]
     )
     .then(() => response.send('Insert complete'))
@@ -67,12 +73,13 @@ function loadComments() {
             fs.readFile('raw-comments-data.json', (err, fd) => {
                 JSON.parse(fd.toString()).forEach(comment => {
                     client.query(
-                        `INSERT INTO comments(id, commenter_id, comment_text, profile_id) VALUES ($1, $2, $3, $4)`,
-                        [comment.id, comment.commenter_id, comment.comment_text, comment.profile_id]
+                        `INSERT INTO comments(id, commenter_id, username, comment_text, profile_id) VALUES ($1, $2, $3, $4, $5)`,
+                        [comment.id, comment.commenter_id, comment.username, comment.comment_text, comment.profile_id]
                     )
                     .catch(console.error);
                 })
             })
+            client.query('ALTER SEQUENCE comments_id_seq RESTART WITH 10')
         }
     })
 }
@@ -89,7 +96,8 @@ function loadUsers() {
                     )
                     .catch(console.error);
                 })
-            })  
+            }) 
+            client.query('ALTER SEQUENCE users_id_seq RESTART WITH 10') 
         }
     })
 }
@@ -107,6 +115,7 @@ function loadPets() {
                     .catch(console.error);
                 })
             })
+            client.query('ALTER SEQUENCE pets_id_seq RESTART WITH 10')
         }
     })   
 }
@@ -150,6 +159,7 @@ function loadDB() {
         comments (
             id SERIAL PRIMARY KEY,
             commenter_id INTEGER,
+            username VARCHAR(30),
             comment_text VARCHAR(140),
             profile_id INTEGER
         );`
