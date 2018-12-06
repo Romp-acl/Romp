@@ -8,7 +8,11 @@ const conString = 'postgres://localhost:5432';
 const client = new pg.Client(conString);
 
 client.connect();
+
 client.on('error', err => console.error(err));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static('./Public'));
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
@@ -16,7 +20,7 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 app.get('/', (request, response) => response.sendFile('./Public/index.html'));
 app.get('/petData', (request, response) => {
     client.query(`
-        SELECT pets.*, users.username, users.address 
+        SELECT pets.*, users.id, users.username, users.address 
         FROM pets
         JOIN users ON users.id = pets.owner_id;
     `)
@@ -34,7 +38,51 @@ app.get('/userData', (request, response) => {
     .catch(console.error);
 });
 
+app.get('/msgBoardData', (request, response) => {
+    client.query(`
+    SELECT comments.*, users.username 
+    FROM comments
+    JOIN users ON comments.commenter_id = users.id;
+    `)
+    .then(result => response.send(result.rows))
+    .catch(console.error);
+})
+
+app.post('/userComment', (request, response) => {
+    console.log(request.body);
+    client.query(
+        `INSERT INTO comments(commenter_id, username, comment_text, profile_id)
+        VALUES($1, $2, $3, $4)`,
+        [
+            request.body.commenter_id,
+            request.body.username,
+            request.body.comment_text,
+            request.body.profile_id
+        ]
+    )
+    .then(() => response.send('Insert complete'))
+    .catch(console.error);
+})
+
 loadDB();
+
+function loadComments() {
+    client.query('SELECT COUNT(*) FROM comments')
+    .then(result => {
+        if(!parseInt(result.rows[0].count)) {
+            fs.readFile('raw-comments-data.json', (err, fd) => {
+                JSON.parse(fd.toString()).forEach(comment => {
+                    client.query(
+                        `INSERT INTO comments(id, commenter_id, username, comment_text, profile_id) VALUES ($1, $2, $3, $4, $5)`,
+                        [comment.id, comment.commenter_id, comment.username, comment.comment_text, comment.profile_id]
+                    )
+                    .catch(console.error);
+                })
+            })
+            client.query('ALTER SEQUENCE comments_id_seq RESTART WITH 10')
+        }
+    })
+}
 
 function loadUsers() {
     client.query('SELECT COUNT(*) FROM users')
@@ -48,7 +96,8 @@ function loadUsers() {
                     )
                     .catch(console.error);
                 })
-            })  
+            }) 
+            client.query('ALTER SEQUENCE users_id_seq RESTART WITH 10') 
         }
     })
 }
@@ -66,6 +115,7 @@ function loadPets() {
                     .catch(console.error);
                 })
             })
+            client.query('ALTER SEQUENCE pets_id_seq RESTART WITH 10')
         }
     })   
 }
@@ -103,4 +153,18 @@ function loadDB() {
     )
     .then(loadPets)
     .catch(console.error);
+
+    client.query(`
+        CREATE TABLE IF NOT EXISTS
+        comments (
+            id SERIAL PRIMARY KEY,
+            commenter_id INTEGER,
+            username VARCHAR(30),
+            comment_text VARCHAR(140),
+            profile_id INTEGER
+        );`
+    )
+    .then(loadComments)
+    .catch(console.error);
 }
+

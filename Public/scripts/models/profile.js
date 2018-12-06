@@ -1,4 +1,5 @@
 function UserProfile(user) {
+    this.id = user.id;
     this.username = user.username;
     this.password = user.password;
     this.email = user.email;
@@ -32,10 +33,6 @@ UserProfile.prototype.toHtml = function() {
     var filledTemplate = templateFiller(this);
     return filledTemplate;
 }
-
-// function addUser(rawData) {
-//     UserProfile.all.push(new UserProfile(rawData));
-// }
 
 
 

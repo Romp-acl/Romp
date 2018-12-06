@@ -1,5 +1,6 @@
 
 $(window).ready(function() {
-  UserProfile.loadUsers(); 
+  UserProfile.loadUsers();
+  UserComment.loadComments();
 })
 
