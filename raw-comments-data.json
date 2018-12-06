@@ -2,24 +2,28 @@
     {
         "id" : "1",
         "commenter_id" : "4",
+        "username" : "",
         "comment_text" : "Hello, let's get together for a doggie playdate!",
         "profile_id" : "5"
     },
     {
         "id" : "2",
         "commenter_id" : "3",
+        "username" : "",
         "comment_text" : "Can I hang too? email me!",
         "profile_id" : "5"
     },
     {
         "id" : "3",
         "commenter_id" : "5",
+        "username" : "",
         "comment_text" : "Yasss, let's meet at Laurelhurst Park",
         "profile_id" : "5"
     },
     {
         "id" : "4",
         "commenter_id" : "5",
+        "username" : "",
         "comment_text" : "Hello, I'm looking for a dog-sitter - email me!",
         "profile_id" : "1"
     }

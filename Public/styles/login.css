@@ -1,70 +1,81 @@
 .signupPopup {
-display: none;
-position: absolute;
-width: 768px;
-justify-content: space-between;
-top: 50%;
-left: 50%;
-transform: translateX(-50%) translateY(-50%);
-background-color: rgba(0, 0, 0, 0.9);
-align-items: center;
-padding: 20px;
-box-shadow: 0px 0 10px 5px blueviolet;
+    display: none;
+    position: absolute;
+    width: 768px;
+    justify-content: space-between;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 0 10px 5px blueviolet;
 }
+
 .signupPopup.active {
-display: block;
+    display: block;
 }
+
 .signupPopup ul {
-display: flex;
-z-index: 2;
-color: white;
-position: relative;
-width: 100%;
-padding: 0;
-list-style: none;
-justify-content: space-between;
+    display: flex;
+    z-index: 2;
+    color: white;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    justify-content: space-between;
 }
+
 .signupPopup li {
-width: 45%;
-text-align: center;
-padding: 10px;
-border-bottom: 3px solid;
-color: white;
-cursor: pointer;
+    cursor: pointer;
+    width: 45%;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 3px solid;
 }
+
 .exitPopup {
-position: absolute;
-top: 0;
-right: 0;
-padding: 5px!important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px!important;
 }
+
 .heroForm {
-z-index: -1;
-opacity: 0;
-transition: all .5s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+    transition: all .5s ease-in-out;
 }
+
 .heroForm.active {
-z-index: 1;
-opacity: 1;
+    z-index: 1;
+    opacity: 1;
 }
+
 .loginForm {
-position: absolute;
-top: 200px;
-left: 0;
-width: 100%;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
 }
+
 .loginForm, .registerForm {
-background-color: black;
+    background-color: black;
 }
+
 .hero fieldset, .hero h3 {
-color: white;
+    color: white;
 }
+
 form input {
-padding: 20px;
-font-size: 20px;
-width: 40%;
+    padding: 20px;
+    font-size: 20px;
+    width: 40%;
 }
+
 .hero form input[type="submit"] {
+<<<<<<< HEAD
 max-width: 200px;
 margin: 20px auto;
 padding: 20px;
@@ -76,4 +87,17 @@ cursor: pointer;
 }
 form input[type='button'] {
     cursor: pointer;
+=======
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid blueviolet;
+}
+
+.hero form input:hover {
+    cursor: text;
+>>>>>>> master
 }
