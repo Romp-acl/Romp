@@ -18,7 +18,7 @@ function initMap() {
                     breed: petsInfo[i].breed,
                     sex: petsInfo[i].sex,
                     age: petsInfo[i].age,
-                    img: petsInfo[i].imgurl.split('Public/')[1],
+                    img: petsInfo[i].imgurl,
                     category: [petsInfo[i].color, petsInfo[i].sex, petsInfo[i].size]
                 }
             }));
