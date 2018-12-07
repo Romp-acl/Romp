@@ -1,5 +1,5 @@
 $('.hero button').on('click', function(){
-    userLogin()
+    userLogin();
     $('.signupPopup').toggleClass('active')});
     $('.signupPopup li').on('click', function(e){
         $('.signupPopup li').css('color', 'white');
@@ -29,4 +29,3 @@ function userLogin() {
         })
     });
 }
-
