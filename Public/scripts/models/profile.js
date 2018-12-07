@@ -87,7 +87,7 @@ $( "#regBtn" ).on( "click", function(event) {
         size: $("input[name=petsize]").val(),
         temperment: $("input[name=pettemperment]").val(),
         interests: $("input[name=petinterest]").val(),
-        about: $("input[name=petabout]").val()
+        description: $("input[name=petabout]").val()
 
     });
     console.log(addUser);
