@@ -18,8 +18,8 @@
                 <section class="petInfoAndIMG">
                     <img src="{{petObj.imgUrl}}" class="petIMG">
                     <aside class="petInfo">
-                        <h1>{{username}}</h1>
-                        <h2>{{petObj.name}}</h2>
+                        <h1>{{petObj.name}}</h1>
+                        <h2>{{username}}</h2>
                         <ul>
                             <li>Breed: {{petObj.breed}}</li>
                             <li>Gender: {{petObj.sex}}</li>
@@ -75,6 +75,19 @@
                     <button id="postComment">Post</button>
                     <ul class="clearfix comments"></ul>
                 </div>
+                <div id="options">
+                        <h3>Filter By:</h3>
+                        <h4>Color</h4>
+                        <input type="checkbox" value="Black" onchange="updateView(this);"/> black
+                        <input type="checkbox" value="white" onchange="updateView(this);"/> white
+                        <h4>Gender</h4>
+                        <input type="checkbox" value="male" onchange="updateView(this);"/> male
+                        <input type="checkbox" value="female" onchange="updateView(this);"/> female
+                        <h4>Size</h4>
+                        <input type="checkbox" value="small" onchange="updateView(this);"/> small
+                        <input type="checkbox" value="medium" onchange="updateView(this);"/> Medium
+                        <input type="checkbox" value="large" onchange="updateView(this);"/> Large
+                    </div>
                 <div class="map">   
                 </div>
             </div>
@@ -91,21 +104,19 @@
                     <p>SOCIAL PETWORKING</p>
                 </div>
             </div>
-            <!-- <nav>
+            <nav>
                 <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                    <li>Item 4</li>
+                    <li id="return-profile">Home</li>
+                    <!-- <li>Login</li> -->
                 </ul>
-            </nav> -->
+            </nav>
         </div>
     </header>
     <main>
         <section class="hero">
             <div class="bgOverlay"></div>
             <div class="inner">
-                <h2>Social petworking for pet parents of all shapes, sizes and species to connect with other animal lovers in the neighborhood.</h2>
+                <h2>Social petworking for pet parents of all shapes, sizes and species <br>to connect with other animal lovers in the neighborhood.</h2>
                 <button>SIGN UP!</button>
                 <div class="signupPopup">
                     <button class="exitPopup">X</button>
@@ -166,7 +177,5 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY">
     </script>
-    <script src="scripts/models/login.js"></script>
-    <script src="scripts/models/filter.js"></script>
 </body>
 </html>

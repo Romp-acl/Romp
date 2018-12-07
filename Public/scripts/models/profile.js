@@ -4,8 +4,9 @@ function UserProfile(user) {
     this.password = user.password;
     this.email = user.email;
     this.address = user.address;
+    this.id = user.owner_id;
     this.petObj = {
-        imgUrl : user.imgUrl,
+        imgUrl : user.imgurl,
         breed : user.breed,
         sex : user.sex,
         name : user.name,
@@ -26,6 +27,7 @@ UserProfile.loadUsers = function() {
             UserProfile.all.push(new UserProfile(user));
         });
     })
+    getAddresses();
 }
 
 UserProfile.prototype.toHtml = function() {
@@ -34,6 +36,17 @@ UserProfile.prototype.toHtml = function() {
     return filledTemplate;
 }
 
+//loop through the petsinfo array to find the coords and match it with the user address.
+//then, add it to the UserProfile
+function matchCoords() {
+    UserProfile.all.map(eachProfile => {
+        petsInfo.map(eachPet => {
+            if(eachProfile.address == eachPet.address){
+                return eachProfile.coords = eachPet.coordinates;
+            }
+        })
+    })
+}
 
 
 

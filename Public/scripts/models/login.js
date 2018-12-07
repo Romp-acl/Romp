@@ -1,5 +1,5 @@
 $('.hero button').on('click', function(){
-    userLogin()
+    userLogin();
     $('.signupPopup').toggleClass('active')});
     $('.signupPopup li').on('click', function(e){
         $('.signupPopup li').css('color', 'white');
@@ -21,12 +21,11 @@ function userLogin() {
                 $loginID = user.id; 
                 $('.userProfile').prepend(user.toHtml());
                 $('.hero').hide();
-                $('userProfile').show();
-                initMap();
-                initMsgBoard();
-                addPrevComments();
             }
         });
+        initLoginProfile();
+        $('#return-profile').on('.click', function() {
+            returnProfile($username);
+        })
     });
 }
-

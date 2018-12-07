@@ -23,3 +23,20 @@ function initMsgBoard() {
     })
     $('#postComment').attr('disabled', 'true');
 }
+
+function returnProfile(username) {
+    UserProfile.all.map(user => {
+        if (user.username == username) {
+            $('.userProfile').empty();
+            $('.userProfile').prepend(user.toHtml());
+            initLoginProfile();
+        }
+    })
+}
+
+function initLoginProfile() {
+    $('userProfile').show();
+    initMap();
+    initMsgBoard();
+    addPrevComments();
+}

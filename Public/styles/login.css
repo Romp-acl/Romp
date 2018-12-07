@@ -33,6 +33,7 @@
     text-align: center;
     padding: 10px;
     border-bottom: 3px solid;
+    color: white;
 }
 
 .exitPopup {
@@ -75,7 +76,6 @@ form input {
 }
 
 .hero form input[type="submit"] {
-<<<<<<< HEAD
 max-width: 200px;
 margin: 20px auto;
 padding: 20px;
@@ -87,17 +87,5 @@ cursor: pointer;
 }
 form input[type='button'] {
     cursor: pointer;
-=======
-    max-width: 200px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 15px;
-    background-color: transparent;
-    color: white;
-    border: 3px solid blueviolet;
 }
 
-.hero form input:hover {
-    cursor: text;
->>>>>>> master
-}
