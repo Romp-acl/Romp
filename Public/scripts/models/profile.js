@@ -48,8 +48,51 @@ function matchCoords() {
     })
 }
 
+UserProfile.prototype.insertRecord = function() {
+    // const newUser = {
+    //     username: this.username, 
+    //     password: this.password, 
+    //     email: this.email, 
+    //     address: this.address, 
+    //     name: this.name, 
+    //     img: this.img, 
+    //     breed: this.breed, 
+    //     sex: this.sex, 
+    //     age: this.age, 
+    //     color: this.color, 
+    //     size: this.size, 
+    //     temperment: this.temperment, 
+    //     interests: this.interests, 
+    //     about: this.about
+    // }
+    console.log(this);
+    $.post('/regForm', JSON.parse(JSON.stringify(this)))
+    .then(console.log);
+};
 
+$( "#regBtn" ).on( "click", function(event) {
+    event.preventDefault();
+    
+    let addUser = new UserProfile({
+        username: $("input[name=new-username]").val(),
+        password: $("input[name=new-password]").val(),
+        email: $("input[name=email]").val(),
+        address: $("input[name=address]").val(),
+        imgurl: $("input[name=petIMG]").val(),
+        breed: $("input[name=breed]").val(),
+        sex: $("input[name=sex]").val(),
+        name: $("input[name=petname]").val(),
+        age: $("input[name=petage]").val(),
+        color: $("input[name=petcolor]").val(),
+        size: $("input[name=petsize]").val(),
+        temperment: $("input[name=pettemperment]").val(),
+        interests: $("input[name=petinterest]").val(),
+        about: $("input[name=petabout]").val()
 
+    });
+    console.log(addUser);
+    addUser.insertRecord();
+  });
 
 
 

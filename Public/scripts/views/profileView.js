@@ -40,3 +40,5 @@ function initLoginProfile() {
     initMsgBoard();
     addPrevComments();
 }
+
+

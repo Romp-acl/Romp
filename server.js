@@ -64,6 +64,39 @@ app.post('/userComment', (request, response) => {
     .catch(console.error);
 })
 
+app.post('/regForm', (request, response) => {
+    client.query(
+        `INSERT INTO users(username, password, email, address) VALUES($1, $2, $3, $4) 
+        ON CONFLICT DO NOTHING
+        RETURNING id`,
+        [request.body.username, request.body.password, request.body.email, request.body.address]
+    )
+    .then((result) => {
+        console.log(JSON.stringify(request.body));
+        client.query(
+        `INSERT INTO
+        pets(owner_id, imgurl, breed, sex, name, age, color, size, temperment, interests, description)
+        VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+        `,
+        [
+            result.rows[0].id,
+            request.body.petObj.imgUrl,
+            request.body.petObj.breed,
+            request.body.petObj.sex,
+            request.body.petObj.name,
+            request.body.petObj.age,
+            request.body.petObj.color,
+            request.body.petObj.size,
+            request.body.petObj.temperment,
+            request.body.petObj.interests,
+            request.body.petObj.about
+        ]
+        )
+    })
+    .then(() => response.send('Insert complete'))
+    .catch(console.error);
+})
+
 loadDB();
 
 function loadComments() {
@@ -128,7 +161,7 @@ function loadDB() {
             username VARCHAR(255) UNIQUE NOT NULL,
             password VARCHAR(255) UNIQUE NOT NULL,
             email VARCHAR(255) UNIQUE NOT NULL,
-            address VARCHAR(255) NOT NULL
+            address VARCHAR(255) 
         );`
     )
     .then(loadUsers)
