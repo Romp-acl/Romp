@@ -117,11 +117,11 @@ function filterMarkers() {
 
 function updateView(element) {
     if (element) {
-      //Get array with names of the checked boxes
+      //Array with checked boxes
       var checkedBoxes = ([...document.querySelectorAll('input[type=checkbox]:checked')]).map(function(option) { return option.value; });
       console.log(checkedBoxes);
       for (var i = 0; i < markers.length; i++) {
-        console.log(markers[i].properties.category);
+        console.log(markers[i]);
         //Filter to show any markets containing ALL of the selected options
         if(typeof markers[i].properties.category == 'object' && checkedBoxes.every(function (option) {
         return (markers[i].properties.category).indexOf(option) >= 0;})){
