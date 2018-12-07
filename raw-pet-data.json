@@ -72,6 +72,21 @@
         "temperment": "Philosophical, inquisitive, soulful, silly", 
         "interests": "Squirrelin, hikin, playdates, making fun, cuddlin",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
+    },
+
+    {
+        "id": "6",
+        "owner_id": "6",
+        "imgUrl": "/assets/dogs/skinny.jpg",
+        "breed": "Sphynx",
+        "sex": "male",
+        "name": "Skinny",
+        "age": "14 years",
+        "color": "Tan",
+        "size": "medium",
+        "temperment": "Lazy, inquisitive, rude, silly", 
+        "interests": "Eating, napping, sleeping, cuddlin",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     }
 
 ]

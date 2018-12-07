@@ -6,7 +6,7 @@ $('.hero button').on('click', function(){
         $(this).css('color', 'yellow');
         const targetText = e.target.innerText.toLowerCase();
         $(`.heroForm`).removeClass('active');
-        $(`.${targetText}`).addClass('active');
+        $(`.${targetText}`).toggleClass('active');
 })
 
 var $username = "";
