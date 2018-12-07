@@ -15,7 +15,7 @@ function UserProfile(user) {
         size : user.size,
         temperment : user.temperment,
         interests : user.interests,
-        about : user.description
+        about : user.description,
     }
 }
 
@@ -49,22 +49,6 @@ function matchCoords() {
 }
 
 UserProfile.prototype.insertRecord = function() {
-    // const newUser = {
-    //     username: this.username, 
-    //     password: this.password, 
-    //     email: this.email, 
-    //     address: this.address, 
-    //     name: this.name, 
-    //     img: this.img, 
-    //     breed: this.breed, 
-    //     sex: this.sex, 
-    //     age: this.age, 
-    //     color: this.color, 
-    //     size: this.size, 
-    //     temperment: this.temperment, 
-    //     interests: this.interests, 
-    //     about: this.about
-    // }
     console.log(this);
     $.post('/regForm', JSON.parse(JSON.stringify(this)))
     .then(console.log);
@@ -87,8 +71,7 @@ $( "#regBtn" ).on( "click", function(event) {
         size: $("input[name=petsize]").val(),
         temperment: $("input[name=pettemperment]").val(),
         interests: $("input[name=petinterest]").val(),
-        about: $("input[name=petabout]").val()
-
+        description: $("input[name=petabout]").val(),
     });
     console.log(addUser);
     addUser.insertRecord();
