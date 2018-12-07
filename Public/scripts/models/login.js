@@ -21,12 +21,12 @@ function userLogin() {
                 $loginID = user.id; 
                 $('.userProfile').prepend(user.toHtml());
                 $('.hero').hide();
-                $('userProfile').show();
-                initMap();
-                initMsgBoard();
-                addPrevComments();
             }
         });
+        initLoginProfile();
+        $('#return-profile').on('.click', function() {
+            returnProfile($username);
+        })
     });
 }
 
