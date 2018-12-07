@@ -38,6 +38,15 @@
         "email": "dimitri@gmail.com",
         "address": "3600 NE 44th Ave. Portland, OR 97213"
         
+    },
+
+    {
+        "id": "6",
+        "username": "Dan-The-Man",
+        "password": "password6",
+        "email": "skinny@gmail.com",
+        "address": "9436 N Tyler Ave. Portland, OR 97203"
+        
     }
 
 ]

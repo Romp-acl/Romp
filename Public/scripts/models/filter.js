@@ -1,2 +1,4 @@
-$('.filter button').on('click', function(){$('.filterPopup').toggleClass('active')});
+$('.filter button').on('click', function() {
+    $('.filterPopup').addClass('active')
+});
     
