@@ -135,24 +135,15 @@
 .msgBoard ul li:hover {
 	border-bottom: 3px solid #00688B;
 }
-#options {
-    background-color: rgba(0, 0, 0, 0.75);
-    color: white;
-    margin-bottom: 10px;
-    height: 0;
-    overflow: auto;
-    transition: all .5s ease-in-out;
-}
-#options.active {
-    height: 250px;
-    border-bottom: 3px solid blueviolet;
-    padding: 15px;
-}
-#options h4 {
-    border-bottom: 2px solid cadetblue;
-}
+
+
 /* =========================== DESKTOP VIEW ========================== */
 @media screen and (min-width: 768px) {
+
+    .petProfile {
+        width: 91%;
+    }
+
     .petIMG {
         width: 35%;
     }
@@ -165,35 +156,5 @@
     .msgBoard {
         order: unset;
     }
-    #options {
-        position: fixed;
-        padding: 0;
-        top: 0;
-        left: 0;
-        width: 600px;
-        border-right: 3px solid blueviolet;
-        border-bottom: none;
-        transform: translateX(-604px);
-    }
-    #options.active {
-        height: 100vh;
-        transform: none;
-    }
-    .innerOptions {
-        width: 400px;
-        margin-left: auto;
-    }
-    .filterCheckboxes {
-        font-size: 1.5em;
-    }
-    #options h4 {
-        font-size: 1.5em;
-        padding-left: 20px;
-        margin-bottom: 10px;
-        border-bottom: 10px solid cadetblue;
-    }
-    .filterCheckboxes input {
-        margin-left: 10px;
-        height: 15px;
-    }
+    
 }
