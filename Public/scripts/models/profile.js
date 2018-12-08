@@ -26,9 +26,17 @@ UserProfile.loadUsers = function() {
         json.map(user => {
             UserProfile.all.push(new UserProfile(user));
         });
-    })
-    getAddresses();
+    }).then(addCoordsToUserProfile)
 }
+
+function addCoordsToUserProfile() {
+    UserProfile.all.map(eachProfile => {
+        $.getJSON(`https://maps.googleapis.com/maps/api/geocode/json?address=${eachProfile['address']}&key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY`, function(json){
+            eachProfile.coords = (json.results[0].geometry.location);
+        })
+    })
+}
+
 
 UserProfile.prototype.toHtml = function() {
     var templateFiller = Handlebars.compile($('#user-profile').html());
@@ -36,17 +44,6 @@ UserProfile.prototype.toHtml = function() {
     return filledTemplate;
 }
 
-//loop through the petsinfo array to find the coords and match it with the user address.
-//then, add it to the UserProfile
-function matchCoords() {
-    UserProfile.all.map(eachProfile => {
-        petsInfo.map(eachPet => {
-            if(eachProfile.address == eachPet.address){
-                return eachProfile.coords = eachPet.coordinates;
-            }
-        })
-    })
-}
 
 UserProfile.prototype.insertRecord = function() {
     console.log(this);
@@ -80,8 +77,3 @@ $( "#regBtn" ).on( "click", function(event) {
     initMap();
     $('.hero').hide();
   });
-
-
-
-
-

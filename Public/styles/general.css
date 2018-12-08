@@ -51,11 +51,14 @@ header ul li {
     height: 100vh;
     display: flex;
     text-align: center;
-    background-image: url(https://media.istockphoto.com/photos/motion-blurred-of-white-english-bulldog-run-on-the-grass-at-public-picture-id944486738?k=6&m=944486738&s=612x612&w=0&h=CCQCMdnr1Ln8STYjsJwA0EiTJaXriPH810TF0_D1a1I=);
+    background-image: url(https://media.istockphoto.com/photos/friendly-pets-picture-id904463770?k=6&m=904463770&s=612x612&w=0&h=XM7J3ntqkiX0_J5_hWx9jzWD_YBasFEmq6jGziI1548=);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
 }
 
 .bgOverlay {

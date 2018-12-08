@@ -1,14 +1,14 @@
 .signupPopup {
     display: none;
     position: absolute;
-    width: 768px;
     justify-content: space-between;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    max-width: 100%;
+    top: 10%;
+    left: 0;
     background-color: rgba(0, 0, 0, 0.9);
     align-items: center;
     padding: 20px;
+    margin: 20px;
     box-shadow: 0px 0 10px 5px blueviolet;
 }
 
@@ -59,6 +59,8 @@
     top: 200px;
     left: 0;
     width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .loginForm, .registerForm {
@@ -68,11 +70,9 @@
 .hero fieldset, .hero h3 {
     color: white;
 }
-
 form input {
-    padding: 20px;
     font-size: 20px;
-    width: 40%;
+    width: 100%;
 }
 
 .hero form input[type="submit"] {
@@ -88,4 +88,26 @@ cursor: pointer;
 form input[type='button'] {
     cursor: pointer;
 }
-
+.regLoginBtn {
+    color: white;
+    border: 3px solid blueviolet;
+    background-color: transparent;
+    margin-top: 10px;
+    max-width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+}
+/* =========================== DESKTOP VIEW ========================== */
+@media screen and (min-width: 768px) {
+.signupPopup {
+    width: 768px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+form input {
+    padding: 20px;
+    font-size: 20px;
+    width: 40%;
+}
+}

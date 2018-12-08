@@ -7,19 +7,11 @@
     <link rel="stylesheet" href="styles/main.css">
     <script id="user-profile" type="text/x-handlebars-template">
         <div class="inner">
-            <!-- <div class="profileSidebar">
-                <ul>
-                    <li>{{pet1}}</li>
-                    <li>{{pet2}}</li>
-                    <li>{{pet3}}</li>
-                </ul>
-            </div> -->
             <div class="petProfile">
                 <section class="petInfoAndIMG">
                     <img src="{{petObj.imgUrl}}" class="petIMG">
                     <aside class="petInfo">
-                        <h1>{{petObj.name}}</h1>
-                        <h2>{{username}}</h2>
+                        <h1>{{petObj.name}}<span class="ownerID"> (Owner: {{username}})</span></h1>
                         <ul>
                             <li>Breed: {{petObj.breed}}</li>
                             <li>Gender: {{petObj.sex}}</li>
@@ -31,41 +23,6 @@
                     </aside>
                 </section>
                 <div class="petDesc"><h3>About:</h3><p>{{petObj.about}}</p></div>
-                <section class="filter">
-                    <div class="bgOverlay"></div>
-                    <div class="inner">
-                        <button>Filter</button>
-                        <div class="filterPopup">
-                            <button class="exitPopup">X</button>
-                            <div class="register registerForm heroForm active">
-                                <form action="">
-                                    <fieldset class="petFieldset">
-                                        <legend>Filter Pets</legend>
-                                        <input type="text" placeholder="Breed" name="breed">
-                                        <div id="gender">
-                                            <legend>Gender</legend>
-                                            <input type="radio" name="gender" value="male">Male<br>
-                                            <input type="radio" name="gender" value="female">Female<br>
-                                        </div>
-                                        <div id="size">
-                                            <legend>Size</legend>
-                                            <input type="radio" name="size" value="small">Small<br>
-                                            <input type="radio" name="size" value="medium">Medium<br>
-                                            <input type="radio" name="size" value="large">Large<br>
-                                        </div>
-                                        <div id="interests">
-                                            <legend>Interests</legend>
-                                            <input type="checkbox" name="training" value="training">Training<br>
-                                            <input type="checkbox" name="breeding" value="breeding">Breeding<br>
-                                            <input type="checkbox" name="playtime" value="playtime">Playtime<br>
-                                        </div>
-                                    </fieldset>
-                                    <button class="apply">Apply Filters</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 <div class="msgBoard">
                     <header>
                         <h2>Leave a comment to connect with me</h2>
@@ -75,23 +32,37 @@
                     <button id="postComment">Post</button>
                     <ul class="clearfix comments"></ul>
                 </div>
-                <div id="options">
-                        <h3>Filter By:</h3>
-                        <h4>Color</h4>
-                        <input type="checkbox" value="Black" onchange="updateView(this);"/> black
-                        <input type="checkbox" value="white" onchange="updateView(this);"/> white
-                        <h4>Gender</h4>
-                        <input type="checkbox" value="male" onchange="updateView(this);"/> male
-                        <input type="checkbox" value="female" onchange="updateView(this);"/> female
-                        <h4>Size</h4>
-                        <input type="checkbox" value="small" onchange="updateView(this);"/> small
-                        <input type="checkbox" value="medium" onchange="updateView(this);"/> Medium
-                        <input type="checkbox" value="large" onchange="updateView(this);"/> Large
+                <div class="mapPlusFilters">
+                    <button class="filter-sidebar" onclick="filterSidebar(this)">Show Filters</button>
+                    <div id="options">
+                            <div class="innerOptions">
+                                <h3>Filter By:</h3>
+                                <div class="filterCheckboxes">
+                                    <h4>Breed</h4>
+                                    <input type="checkbox" value="pug" onchange="updateView(this);"/> Pug
+                                    <input type="checkbox" value="chihuahua" onchange="updateView(this);"/> Chihuahua
+                                    <input type="checkbox" value="dachshund" onchange="updateView(this);"/> Dachshund
+                                    <input type="checkbox" value="pitbull" onchange="updateView(this);"/> Pitbull
+                                    <input type="checkbox" value="bulldog" onchange="updateView(this);"/> Bulldog
+                                    <h4>Color</h4>
+                                    <input type="checkbox" value="black" onchange="updateView(this);"/> Black
+                                    <input type="checkbox" value="white" onchange="updateView(this);"/> White
+                                    <h4>Gender</h4>
+                                    <input type="checkbox" value="male" onchange="updateView(this);"/> Male
+                                    <input type="checkbox" value="female" onchange="updateView(this);"/> Female
+                                    <h4>Size</h4>
+                                    <input type="checkbox" value="small" onchange="updateView(this);"/> Small
+                                    <input type="checkbox" value="medium" onchange="updateView(this);"/> Medium
+                                    <input type="checkbox" value="large" onchange="updateView(this);"/> Large
+                                </div>
+                            </div>
+                        </div>
+                    <div class="map">   
                     </div>
-                <div class="map">   
                 </div>
             </div>
         </div>
+        
     </script>
 </head>
 <body>
@@ -143,14 +114,17 @@
                                 <input type="text" placeholder="Pet Size: Small, Medium, Large" name="petsize">
                                 <input type="text" placeholder="Describe your pet!" name="petabout">
                             </fieldset>
-                            <input  id="regBtn" type="button" value="Submit">
+                            <input  id="regBtn" class="regLoginBtn" type="button" value="Submit">
                         </form>
                     </div>
                     <div class="login loginForm heroForm">
                         <form action="">
-                            <input type="text" placeholder="Username" name="username">
-                            <input type="text" placeholder="Password" name="password">
-                            <input type="button" value="Submit" id="loginBtn">
+                            <fieldset class="loginDetails">
+                                <legend>Enter Your Login Details</legend>
+                                <input type="text" placeholder="Username" name="username">
+                                <input type="text" placeholder="Password" name="password">
+                                <input type="button" class="regLoginBtn" value="Submit" id="loginBtn">
+                            </fieldset>
                         </form>
                     </div>
                 </div>
@@ -169,12 +143,11 @@
   <script src="scripts/views/profileView.js"></script>
   <script src="scripts/controllers/profileController.js"></script>
   <script src="scripts/models/login.js"></script>
-  <script src="scripts/controllers/mapController.js"></script>
   <script src="scripts/models/map.js"></script>
   <script src="scripts/views/mapView.js"></script>
   <script src="scripts/views/profileView.js"></script>
   <script src="scripts/models/comments.js"></script>
-  <script src="scripts/models/filter.js"></script>
+  <!-- <script src="scripts/models/filter.js"></script> -->
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY">
     </script>
