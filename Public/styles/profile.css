@@ -9,14 +9,12 @@
     justify-content: space-between;
     padding: 30px 0;
 }
-.profileSidebar {
-    width: 15%;
-}
-.petProfile {
-    width: 80%;
-}
 .petProfile h1 {
     font-size: 2em;
+    margin-bottom: 10px;
+}
+.ownerID {
+    font-size: 15px;
 }
 .petInfoAndIMG {
     display: flex;
@@ -34,7 +32,9 @@
     margin: 20px 0;
     border-bottom: 2px solid #eaeaea;
     border-top: 2px solid #eaeaea;
-    padding: 0 40px;
+    padding: 40px;
+    padding-top: 20px;
+    width: 100%;
 }
 .petDesc h3 {
     font-size: 1.5em;
@@ -46,7 +46,7 @@
     line-height: 1.5em;
     font-size: 1.25em;
 }
-.msgBoard, .map {
+.msgBoard, .mapPlusFilters {
     width: 45%;
 }
 /* .msgBoard {
@@ -132,4 +132,35 @@
 .msgBoard ul li:hover {
 	border-bottom: 3px solid #00688B;
 }
-
+#options {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    width: 600px;
+    border-right: 3px solid blueviolet;
+    color: white;
+    transform: translateX(-604px);
+    transition: all .5s ease-in-out;
+}
+#options.active {
+    transform: none;
+}
+.innerOptions {
+    width: 400px;
+    margin-left: auto;
+}
+.filterCheckboxes {
+    font-size: 1.5em;
+}
+#options h4 {
+    font-size: 1.5em;
+    border-bottom: 10px solid cadetblue;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.filterCheckboxes input {
+    margin-left: 10px;
+    height: 15px;
+}

@@ -4,14 +4,36 @@
         "username": "FearAndLoathing",
         "password": "password1",
         "email": "fearandloathing@hotmail.com",
-        "address": "4069 SE Gladstone st. Portland, OR 97202"
+        "address": "4069 SE Gladstone st. Portland, OR 97202",
+        "owner_id": "1",
+        "imgUrl": "/assets/dogs/mr.-bubz.jpg",
+        "breed": "Chihuahua mix",
+        "sex": "male",
+        "name": "Mr. Bubz",
+        "age": "5 years",
+        "color": "white and brown",
+        "size": "small",
+        "temperment": "feisty", 
+        "interests": "getting angry when he's happy",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
     {
         "id": "2",
         "username": "BMWPeter",
         "password": "password2",
         "email": "bmwpeter@gmail.com",
-        "address": "1025 SE 11th Ave. Portland, OR 97214"
+        "address": "1025 SE 11th Ave. Portland, OR 97214",
+        "owner_id": "2",
+        "imgUrl": "/assets/dogs/brown-dachshund.jpg",
+        "breed": "Dachshund",
+        "sex": "female",
+        "name": "Fritz",
+        "age": "4 years",
+        "color": "maple brown",
+        "size": "small",
+        "temperment": "playful", 
+        "interests": "chasing other dogs",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
         
     },
     {
@@ -19,7 +41,18 @@
         "username": "Ms.brittany",
         "password": "password3",
         "email": "brit@gmail.com",
-        "address": "1610 SE Belmont st. Portland, OR 97214"
+        "address": "1610 SE Belmont st. Portland, OR 97214",
+        "owner_id": "3",
+        "imgUrl": "/assets/dogs/jack-lab.jpg",
+        "breed": "Jack russel terrier/Labrador mix",
+        "sex": "male",
+        "name": "Jack",
+        "age": "6 years",
+        "color": "",
+        "size": "white and brown",
+        "temperment": "cuddly", 
+        "interests": "Cuddling",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
         
     },
     {
@@ -27,7 +60,18 @@
         "username": "Ash&Nick",
         "password": "password4",
         "email": "ash@yahoo.com",
-        "address": "1434 SE Main St. Portland, OR 97214"
+        "address": "1434 SE Main St. Portland, OR 97214",
+        "owner_id": "4",
+        "imgUrl": "/assets/dogs/scrappy.jpg",
+        "breed": "Dachshund Chihuahua mix",
+        "sex": "male",
+        "name": "scrappy",
+        "age": "2 years",
+        "color": "brown",
+        "size": "small",
+        "temperment": "playful", 
+        "interests": "playing with toys",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
         
     },
 
@@ -36,7 +80,18 @@
         "username": "katedam",
         "password": "password5",
         "email": "dimitri@gmail.com",
-        "address": "3600 NE 44th Ave. Portland, OR 97213"
+        "address": "3600 NE 44th Ave. Portland, OR 97213",
+        "owner_id": "5",
+        "imgUrl": "/assets/dogs/kaiya.jpg",
+        "breed": "Schnepherd",
+        "sex": "female",
+        "name": "Kaiya",
+        "age": "6 years",
+        "color": "Black",
+        "size": "large",
+        "temperment": "Philosophical, inquisitive, soulful, silly", 
+        "interests": "Squirrelin, hikin, playdates, making fun, cuddlin",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
         
     },
 
@@ -45,7 +100,18 @@
         "username": "Dan-The-Man",
         "password": "password6",
         "email": "skinny@gmail.com",
-        "address": "9436 N Tyler Ave. Portland, OR 97203"
+        "address": "9436 N Tyler Ave. Portland, OR 97203",
+        "owner_id": "6",
+        "imgUrl": "/assets/dogs/skinny.jpg",
+        "breed": "Sphynx",
+        "sex": "male",
+        "name": "Skinny",
+        "age": "14 years",
+        "color": "Tan",
+        "size": "medium",
+        "temperment": "Lazy, inquisitive, rude, silly", 
+        "interests": "Eating, napping, sleeping, cuddlin",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
         
     }
 

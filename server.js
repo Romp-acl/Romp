@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = 'postgres://postgres:Simplepassword!@localhost:5432/postgres';
+const conString = 'postgres://localhost:5432';
 const client = new pg.Client(conString);
 
 client.connect();
@@ -18,15 +18,15 @@ app.use(express.static('./Public'));
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 
 app.get('/', (request, response) => response.sendFile('./Public/index.html'));
-app.get('/petData', (request, response) => {
-    client.query(`
-        SELECT pets.*, users.id, users.username, users.address 
-        FROM pets
-        JOIN users ON users.id = pets.owner_id;
-    `)
-    .then(result => response.send(result.rows))
-    .catch(console.error);
-});
+// app.get('/petData', (request, response) => {
+//     client.query(`
+//         SELECT pets.*, users.id, users.username, users.address 
+//         FROM pets
+//         JOIN users ON users.id = pets.owner_id;
+//     `)
+//     .then(result => response.send(result.rows))
+//     .catch(console.error);
+// });
 
 app.get('/userData', (request, response) => {
     client.query(`
@@ -139,7 +139,7 @@ function loadPets() {
     client.query('SELECT COUNT(*) FROM pets')
     .then(result => {
         if(!parseInt(result.rows[0].count)) {
-            fs.readFile('raw-pet-data.json', (err, fd) => {
+            fs.readFile('raw-user-data.json', (err, fd) => {
                 JSON.parse(fd.toString()).forEach(pet => {
                     client.query(
                     `INSERT INTO pets(id, owner_id, imgUrl, name, age, breed, sex, color, size, interests, temperment, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,

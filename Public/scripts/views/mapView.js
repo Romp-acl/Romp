@@ -5,21 +5,20 @@ function initMap() {
         zoom: 10, 
         center: new google.maps.LatLng(45.5122, -122.6587),
     });
-    
     setTimeout(function(){ 
-        for (var i=0; i < petsInfo.length; i++) {
+        for (var i=0; i < UserProfile.all.length; i++) {
             markers.push(new google.maps.Marker({
-                position: petsInfo[i].coordinates, 
+                position: UserProfile.all[i].coords, 
                 map: map, 
-                title: petsInfo[i].name,
+                title: UserProfile.all[i].petObj.name,
                 properties: {
-                    owner_id: petsInfo[i].owner_id,
-                    color: petsInfo[i].color, 
-                    breed: petsInfo[i].breed,
-                    sex: petsInfo[i].sex,
-                    age: petsInfo[i].age,
-                    img: petsInfo[i].imgurl,
-                    category: [petsInfo[i].color, petsInfo[i].sex, petsInfo[i].size]
+                    owner_id: UserProfile.all[i].id,
+                    color: UserProfile.all[i].petObj.color, 
+                    breed: UserProfile.all[i].petObj.breed,
+                    sex: UserProfile.all[i].petObj.sex,
+                    age: UserProfile.all[i].petObj.age,
+                    img: UserProfile.all[i].petObj.imgUrl,
+                    category: [UserProfile.all[i].petObj.color, UserProfile.all[i].petObj.sex, UserProfile.all[i].petObj.size]
                 }
             }));
         };
@@ -55,7 +54,7 @@ function initFriendMap(friendProfile) {
     function initMap() {
 
         var friendCoords = friendProfile.coords;
-        var map = new google.maps.Map(document.getElementsByClassName('map')[0], {
+        var map = new google.maps.Map(document.getElementsByClassName('friendMap')[0], {
             zoom: 10, 
             center: new google.maps.LatLng(friendCoords),
         });
@@ -80,21 +79,16 @@ function initFriendMap(friendProfile) {
     initMap();
 }
 
-
-
-
 var friendProfile = [];
 function viewProfileBTN(id) {
-    matchCoords();
     for (var i = 0; i < UserProfile.all.length; i++) {
         if (UserProfile.all[i].id == id) {
             friendProfile = UserProfile.all[i];
-            $('.hideOnMarkerClick').remove();
             $('.userProfile').removeClass('hide');
-            $('.userProfile').prepend(UserProfile.all[i].toHtml());
+            $('.userProfile').html(UserProfile.all[i].toHtml());
             $('.hero').hide();
-            $('userProfile').show().find('.map').removeClass('map').addClass('friendMap');
-            $('#options').hide();
+            $('.userProfile').show().find('.map').removeClass('map').addClass('friendMap');
+            $('#options').removeClass('active');
             $('.petProfile').eq(1).hide();
             initMsgBoard();
             initFriendMap(friendProfile);
@@ -110,9 +104,6 @@ function filterMarkers() {
     }
 }
 
-
-
-
 function updateView(element) {
     if (element) {
       //Array with checked boxes
@@ -127,5 +118,15 @@ function updateView(element) {
             markers[i].setVisible(false);
         }
       }
+    }
+}
+
+//Show filter sidebar
+function filterSidebar(element) {
+    $('#options').toggleClass('active');
+    if($('#options').hasClass('active')) {
+        $(element).text('Hide Filters');
+    } else {
+        $(element).text('Show Filters');
     }
 }
