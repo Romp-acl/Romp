@@ -88,8 +88,6 @@ function viewProfileBTN(id) {
     matchCoords();
     for (var i = 0; i < UserProfile.all.length; i++) {
         if (UserProfile.all[i].id == id) {
-            console.log(id);
-            console.log(UserProfile.all[i].username);
             friendProfile = UserProfile.all[i];
             $('.hideOnMarkerClick').remove();
             $('.userProfile').removeClass('hide');
@@ -119,9 +117,7 @@ function updateView(element) {
     if (element) {
       //Array with checked boxes
       var checkedBoxes = ([...document.querySelectorAll('input[type=checkbox]:checked')]).map(function(option) { return option.value; });
-      console.log(checkedBoxes);
       for (var i = 0; i < markers.length; i++) {
-        console.log(markers[i]);
         //Filter to show any markets containing ALL of the selected options
         if(typeof markers[i].properties.category == 'object' && checkedBoxes.every(function (option) {
         return (markers[i].properties.category).indexOf(option) >= 0;})){

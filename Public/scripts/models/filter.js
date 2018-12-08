@@ -1,4 +1,5 @@
 $('.filter button').on('click', function() {
-    $('.filterPopup').addClass('active')
+    $('.filterPopup').addClass('active');
+    console.log('hey');
 });
     
