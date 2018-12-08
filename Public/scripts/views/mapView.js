@@ -18,7 +18,7 @@ function initMap() {
                     sex: UserProfile.all[i].petObj.sex,
                     age: UserProfile.all[i].petObj.age,
                     img: UserProfile.all[i].petObj.imgUrl,
-                    category: [UserProfile.all[i].petObj.color, UserProfile.all[i].petObj.sex, UserProfile.all[i].petObj.size]
+                    category: [UserProfile.all[i].petObj.breed.toLowerCase(), UserProfile.all[i].petObj.color.toLowerCase(), UserProfile.all[i].petObj.sex.toLowerCase(), UserProfile.all[i].petObj.size.toLowerCase()]
                 }
             }));
         };
@@ -28,17 +28,21 @@ function initMap() {
     }, 1000);
     
     function buildMarkerPopup() {
-        var markerContent = '<div id="content">'+
+        var markerContent = '<div id="markerContent">'+
                             '<div id="siteNotice">'+
                             '</div>'+
-                            '<h1 id="firstHeading" class="firstHeading">'+this.title+'</h1>'+
-                            '<div id="bodyContent">'+
+                            '<div id="mapBodyContent">'+
+                            '<div id="markerPetImage">'+
                             '<img src="'+this.properties.img+'">'+
+                            '</div>'+
+                            '<div id="markerPetInfo">'+
+                            '<h1 id="firstHeading" class="firstHeading">'+this.title+'</h1>'+
                             '<p><b>Age: </b>'+this.properties.age+'<br>'+
                             '<b>Breed: </b>'+this.properties.breed+'<br>'+
                             '<b>Color: </b>'+this.properties.color+'<br>'+
                             '<b>Sex: </b>'+this.properties.sex+'<br>'+
                             '<button onclick="viewProfileBTN('+this.properties.owner_id+')">View Profile</button></p>'
+                            '</div>'+
                             '</div>'+
                             '</div>';
 
@@ -88,8 +92,8 @@ function viewProfileBTN(id) {
             $('.userProfile').html(UserProfile.all[i].toHtml());
             $('.hero').hide();
             $('.userProfile').show().find('.map').removeClass('map').addClass('friendMap');
-            $('#options').removeClass('active');
-            $('.petProfile').eq(1).hide();
+            $('.mapPlusFilters button').hide();
+            // $('#options').removeClass('active');
             initMsgBoard();
             initFriendMap(friendProfile);
             window.scrollTo(0, 0);

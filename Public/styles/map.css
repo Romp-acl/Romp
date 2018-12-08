@@ -1,3 +1,23 @@
 .map, .friendMap {
     height: 400px;
 }
+#mapBodyContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#markerPetImage {
+    width: 35%;
+}
+#markerPetImage img {
+    max-width: 100%;
+}
+#markerPetInfo {
+    width: 60%;
+}
+#markerPetInfo h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid blueviolet;
+    padding: 3px;
+}

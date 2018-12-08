@@ -34,28 +34,35 @@
                 </div>
                 <div class="mapPlusFilters">
                     <button class="filter-sidebar" onclick="filterSidebar(this)">Show Filters</button>
+                    <div id="options">
+                            <div class="innerOptions">
+                                <h3>Filter By:</h3>
+                                <div class="filterCheckboxes">
+                                    <h4>Breed</h4>
+                                    <input type="checkbox" value="pug" onchange="updateView(this);"/> Pug
+                                    <input type="checkbox" value="chihuahua" onchange="updateView(this);"/> Chihuahua
+                                    <input type="checkbox" value="dachshund" onchange="updateView(this);"/> Dachshund
+                                    <input type="checkbox" value="pitbull" onchange="updateView(this);"/> Pitbull
+                                    <input type="checkbox" value="bulldog" onchange="updateView(this);"/> Bulldog
+                                    <h4>Color</h4>
+                                    <input type="checkbox" value="black" onchange="updateView(this);"/> Black
+                                    <input type="checkbox" value="white" onchange="updateView(this);"/> White
+                                    <h4>Gender</h4>
+                                    <input type="checkbox" value="male" onchange="updateView(this);"/> Male
+                                    <input type="checkbox" value="female" onchange="updateView(this);"/> Female
+                                    <h4>Size</h4>
+                                    <input type="checkbox" value="small" onchange="updateView(this);"/> Small
+                                    <input type="checkbox" value="medium" onchange="updateView(this);"/> Medium
+                                    <input type="checkbox" value="large" onchange="updateView(this);"/> Large
+                                </div>
+                            </div>
+                        </div>
                     <div class="map">   
                     </div>
                 </div>
             </div>
         </div>
-        <div id="options">
-            <div class="innerOptions">
-                <h3>Filter By:</h3>
-                <div class="filterCheckboxes">
-                    <h4>Color</h4>
-                    <input type="checkbox" value="Black" onchange="updateView(this);"/> Black
-                    <input type="checkbox" value="white" onchange="updateView(this);"/> White
-                    <h4>Gender</h4>
-                    <input type="checkbox" value="male" onchange="updateView(this);"/> Male
-                    <input type="checkbox" value="female" onchange="updateView(this);"/> Female
-                    <h4>Size</h4>
-                    <input type="checkbox" value="small" onchange="updateView(this);"/> Small
-                    <input type="checkbox" value="medium" onchange="updateView(this);"/> Medium
-                    <input type="checkbox" value="large" onchange="updateView(this);"/> Large
-                </div>
-            </div>
-        </div>
+        
     </script>
 </head>
 <body>
@@ -107,14 +114,17 @@
                                 <input type="text" placeholder="Pet Size: Small, Medium, Large" name="petsize">
                                 <input type="text" placeholder="Describe your pet!" name="petabout">
                             </fieldset>
-                            <input  id="regBtn" type="button" value="Submit">
+                            <input  id="regBtn" class="regLoginBtn" type="button" value="Submit">
                         </form>
                     </div>
                     <div class="login loginForm heroForm">
                         <form action="">
-                            <input type="text" placeholder="Username" name="username">
-                            <input type="text" placeholder="Password" name="password">
-                            <input type="button" value="Submit" id="loginBtn">
+                            <fieldset class="loginDetails">
+                                <legend>Enter Your Login Details</legend>
+                                <input type="text" placeholder="Username" name="username">
+                                <input type="text" placeholder="Password" name="password">
+                                <input type="button" class="regLoginBtn" value="Submit" id="loginBtn">
+                            </fieldset>
                         </form>
                     </div>
                 </div>

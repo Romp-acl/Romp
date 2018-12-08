@@ -3,15 +3,20 @@
     font-size: 1.5em;
     cursor: pointer;
 }
+.userProfile {
+    background-color: #eaeaea;
+}
 .userProfile .inner, .petProfile {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 30px 0;
+    padding: 30px 15px;
+    background-color: white;
 }
-.petProfile h1 {
+.petProfile h1, .petDesc h3 {
     font-size: 2em;
-    margin-bottom: 10px;
+    margin: 0;
+    border-bottom: 3px solid blueviolet;
 }
 .ownerID {
     font-size: 15px;
@@ -21,25 +26,22 @@
     width: 100%;
     align-items: end;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
-.petIMG {
-    width: 35%;
-}
-.petInfo {
-    width: 60%;
+.petIMG, .petInfo {
+    width: 100%;
 }
 .petDesc {
     margin: 20px 0;
-    border-bottom: 2px solid #eaeaea;
-    border-top: 2px solid #eaeaea;
     padding: 40px;
     padding-top: 20px;
     width: 100%;
+    background-color: #f7f7f7;
 }
 .petDesc h3 {
     font-size: 1.5em;
-    background-color: #f9f9f9;
     padding: 10px;
+    margin-bottom: 20px;
 }
 .petDesc p {
     padding-left: 10px;
@@ -47,11 +49,12 @@
     font-size: 1.25em;
 }
 .msgBoard, .mapPlusFilters {
-    width: 45%;
+    width: 100%;
 }
-/* .msgBoard {
-    border: 1px solid black;
-} */
+.msgBoard {
+    order: 1;
+    margin-top: 10px;
+}
 
 .clearfix {
     clear: both;
@@ -133,34 +136,64 @@
 	border-bottom: 3px solid #00688B;
 }
 #options {
-    position: fixed;
-    top: 0;
-    left: 0;
     background-color: rgba(0, 0, 0, 0.75);
-    height: 100vh;
-    width: 600px;
-    border-right: 3px solid blueviolet;
     color: white;
-    transform: translateX(-604px);
+    margin-bottom: 10px;
+    height: 0;
+    overflow: auto;
     transition: all .5s ease-in-out;
 }
 #options.active {
-    transform: none;
-}
-.innerOptions {
-    width: 400px;
-    margin-left: auto;
-}
-.filterCheckboxes {
-    font-size: 1.5em;
+    height: 250px;
+    border-bottom: 3px solid blueviolet;
+    padding: 15px;
 }
 #options h4 {
-    font-size: 1.5em;
-    border-bottom: 10px solid cadetblue;
-    padding-left: 20px;
-    margin-bottom: 10px;
+    border-bottom: 2px solid cadetblue;
 }
-.filterCheckboxes input {
-    margin-left: 10px;
-    height: 15px;
+/* =========================== DESKTOP VIEW ========================== */
+@media screen and (min-width: 768px) {
+    .petIMG {
+        width: 35%;
+    }
+    .petInfo {
+        width: 60%;
+    }
+    .msgBoard, .mapPlusFilters {
+        width: 45%;
+    }
+    .msgBoard {
+        order: unset;
+    }
+    #options {
+        position: fixed;
+        padding: 0;
+        top: 0;
+        left: 0;
+        width: 600px;
+        border-right: 3px solid blueviolet;
+        border-bottom: none;
+        transform: translateX(-604px);
+    }
+    #options.active {
+        height: 100vh;
+        transform: none;
+    }
+    .innerOptions {
+        width: 400px;
+        margin-left: auto;
+    }
+    .filterCheckboxes {
+        font-size: 1.5em;
+    }
+    #options h4 {
+        font-size: 1.5em;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        border-bottom: 10px solid cadetblue;
+    }
+    .filterCheckboxes input {
+        margin-left: 10px;
+        height: 15px;
+    }
 }
