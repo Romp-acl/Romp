@@ -74,7 +74,11 @@ $( "#regBtn" ).on( "click", function(event) {
         description: $("input[name=petabout]").val(),
     });
     console.log(addUser);
+    UserProfile.all.push(addUser);
     addUser.insertRecord();
+    $('.userProfile').prepend(addUser.toHtml());
+    initMap();
+    $('.hero').hide();
   });
 
 
