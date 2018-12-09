@@ -53,7 +53,8 @@ UserProfile.prototype.insertRecord = function() {
 
 $( "#regBtn" ).on( "click", function(event) {
     event.preventDefault();
-    
+    $username = $("input[name=new-username]").val();
+    $password = $("input[name=new-password]").val();
     let addUser = new UserProfile({
         username: $("input[name=new-username]").val(),
         password: $("input[name=new-password]").val(),
@@ -70,10 +71,13 @@ $( "#regBtn" ).on( "click", function(event) {
         interests: $("input[name=petinterest]").val(),
         description: $("input[name=petabout]").val(),
     });
-    console.log(addUser);
     UserProfile.all.push(addUser);
     addUser.insertRecord();
     $('.userProfile').prepend(addUser.toHtml());
     initMap();
     $('.hero').hide();
+    $('#quick-login').text('sign out');
+        $('#quick-login').on('click', function() {
+            location.reload();
+    });
   });
