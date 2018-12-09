@@ -18,15 +18,6 @@ app.use(express.static('./Public'));
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 
 app.get('/', (request, response) => response.sendFile('./Public/index.html'));
-// app.get('/petData', (request, response) => {
-//     client.query(`
-//         SELECT pets.*, users.id, users.username, users.address 
-//         FROM pets
-//         JOIN users ON users.id = pets.owner_id;
-//     `)
-//     .then(result => response.send(result.rows))
-//     .catch(console.error);
-// });
 
 app.get('/userData', (request, response) => {
     client.query(`
@@ -112,7 +103,7 @@ function loadComments() {
                     .catch(console.error);
                 })
             })
-            client.query('ALTER SEQUENCE comments_id_seq RESTART WITH 10')
+            client.query('ALTER SEQUENCE comments_id_seq RESTART WITH 100')
         }
     })
 }
@@ -130,7 +121,7 @@ function loadUsers() {
                     .catch(console.error);
                 })
             }) 
-            client.query('ALTER SEQUENCE users_id_seq RESTART WITH 10') 
+            client.query('ALTER SEQUENCE users_id_seq RESTART WITH 100') 
         }
     })
 }
@@ -148,7 +139,7 @@ function loadPets() {
                     .catch(console.error);
                 })
             })
-            client.query('ALTER SEQUENCE pets_id_seq RESTART WITH 10')
+            client.query('ALTER SEQUENCE pets_id_seq RESTART WITH 100')
         }
     })   
 }
@@ -200,4 +191,3 @@ function loadDB() {
     .then(loadComments)
     .catch(console.error);
 }
-
