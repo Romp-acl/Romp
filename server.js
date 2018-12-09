@@ -103,7 +103,7 @@ function loadComments() {
                     .catch(console.error);
                 })
             })
-            client.query('ALTER SEQUENCE comments_id_seq RESTART WITH 10')
+            client.query('ALTER SEQUENCE comments_id_seq RESTART WITH 100')
         }
     })
 }
@@ -121,7 +121,7 @@ function loadUsers() {
                     .catch(console.error);
                 })
             }) 
-            client.query('ALTER SEQUENCE users_id_seq RESTART WITH 10') 
+            client.query('ALTER SEQUENCE users_id_seq RESTART WITH 100') 
         }
     })
 }
@@ -133,13 +133,13 @@ function loadPets() {
             fs.readFile('raw-user-data.json', (err, fd) => {
                 JSON.parse(fd.toString()).forEach(pet => {
                     client.query(
-                    `INSERT INTO pets(id, owner_id, imgUrl, name, age, breed, sex, color, size, interests, temperment, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,
-                    [pet.id, pet.id, pet.imgUrl, pet.name, pet.age, pet.breed, pet.sex, pet.color, pet.size, pet.temperment, pet.interests,  pet.description]
+                    `INSERT INTO pets(id, owner_id, imgUrl, name, age, breed, sex, color, size, temperment, interests, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,
+                    [pet.id, pet.owner_id, pet.imgUrl, pet.name, pet.age, pet.breed, pet.sex, pet.color, pet.size, pet.temperment, pet.interests, pet.description]
                     )
                     .catch(console.error);
                 })
             })
-            client.query('ALTER SEQUENCE pets_id_seq RESTART WITH 10')
+            client.query('ALTER SEQUENCE pets_id_seq RESTART WITH 100')
         }
     })   
 }
