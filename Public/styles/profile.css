@@ -5,6 +5,7 @@
 }
 .userProfile {
     background-color: #eaeaea;
+    margin-top: 90px;
 }
 .userProfile .inner, .petProfile {
     display: flex;
@@ -12,7 +13,11 @@
     justify-content: space-between;
     padding: 30px 15px;
     background-color: white;
+    box-sizing: border-box;
     width: 100%;
+}
+.userProfile .inner {
+    padding-top: 0;
 }
 .petProfile h1, .petDesc h3 {
     font-size: 2em;
