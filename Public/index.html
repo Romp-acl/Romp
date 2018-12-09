@@ -17,7 +17,7 @@
                             <li>Gender: {{petObj.sex}}</li>
                             <li>Color: {{petObj.color}}</li>
                             <li>Age: {{petObj.age}}</li>
-                            <li>Personality: {{petObj.temperment}}</li>
+                            <li>Personality: {{petObj.temperament}}</li>
                             <li>Looking for: {{petObj.interests}}</li>
                         </ul>
                     </aside>
@@ -109,7 +109,7 @@
                                 <input type="text" placeholder="Sex" name="sex">
                                 <input type="text" placeholder="Pet Age" name="petage">
                                 <input type="text" placeholder="Pet Color" name="petcolor">
-                                <input type="text" placeholder="Pet Temperment" name="pettemperment">
+                                <input type="text" placeholder="Pet Temperament" name="pettemperament">
                                 <input type="text" placeholder="Pet Interest" name="petinterest">
                                 <input type="text" placeholder="Pet Size: Small, Medium, Large" name="petsize">
                                 <input type="text" placeholder="Describe your pet!" name="petabout">
@@ -139,6 +139,9 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY">
+    </script>
   <script src="scripts/models/profile.js"></script>
   <script src="scripts/views/profileView.js"></script>
   <script src="scripts/controllers/profileController.js"></script>
@@ -148,8 +151,5 @@
   <script src="scripts/views/profileView.js"></script>
   <script src="scripts/models/comments.js"></script>
   <script src="scripts/models/filter.js"></script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUOAcCAnV_p17Dryswmj_lbI7SK9EXZjY">
-    </script>
 </body>
 </html>

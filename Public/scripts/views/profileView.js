@@ -35,7 +35,7 @@ function returnProfile(username) {
 }
 
 function initLoginProfile() {
-    $('userProfile').show();
+    $('.userProfile').show();
     initMap();
     initMsgBoard();
     addPrevComments();

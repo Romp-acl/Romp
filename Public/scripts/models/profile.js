@@ -13,7 +13,7 @@ function UserProfile(user) {
         age : user.age,
         color : user.color,
         size : user.size,
-        temperment : user.temperment,
+        temperament : user.temperament,
         interests : user.interests,
         about : user.description,
     }
@@ -66,7 +66,7 @@ $( "#regBtn" ).on( "click", function(event) {
         age: $("input[name=petage]").val(),
         color: $("input[name=petcolor]").val(),
         size: $("input[name=petsize]").val(),
-        temperment: $("input[name=pettemperment]").val(),
+        temperament: $("input[name=pettemperament]").val(),
         interests: $("input[name=petinterest]").val(),
         description: $("input[name=petabout]").val(),
     });

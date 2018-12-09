@@ -9,7 +9,7 @@
 //         "age": "5 years",
 //         "color": "white and brown",
 //         "size": "small",
-//         "temperment": "feisty", 
+//         "temperament": "feisty", 
 //         "interests": "getting angry when he's happy",
 //         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
 //     },
@@ -24,7 +24,7 @@
 //         "age": "4 years",
 //         "color": "maple brown",
 //         "size": "small",
-//         "temperment": "playful", 
+//         "temperament": "playful", 
 //         "interests": "chasing other dogs",
 //         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
 //     },
@@ -39,7 +39,7 @@
 //         "age": "6 years",
 //         "color": "",
 //         "size": "white and brown",
-//         "temperment": "cuddly", 
+//         "temperament": "cuddly", 
 //         "interests": "Cuddling",
 //         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
 //     },
@@ -54,7 +54,7 @@
 //         "age": "2 years",
 //         "color": "brown",
 //         "size": "small",
-//         "temperment": "playful", 
+//         "temperament": "playful", 
 //         "interests": "playing with toys",
 //         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
 //     },
@@ -69,7 +69,7 @@
 //         "age": "6 years",
 //         "color": "Black",
 //         "size": "large",
-//         "temperment": "Philosophical, inquisitive, soulful, silly", 
+//         "temperament": "Philosophical, inquisitive, soulful, silly", 
 //         "interests": "Squirrelin, hikin, playdates, making fun, cuddlin",
 //         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
 //     },
@@ -84,7 +84,7 @@
 //         "age": "14 years",
 //         "color": "Tan",
 //         "size": "medium",
-//         "temperment": "Lazy, inquisitive, rude, silly", 
+//         "temperament": "Lazy, inquisitive, rude, silly", 
 //         "interests": "Eating, napping, sleeping, cuddlin",
 //         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
 //     }
@@ -98,7 +98,7 @@
 //         "age": "14 years",
 //         "color": "Orange",
 //         "size": "small",
-//         "temperment": "Grumpy, affectionate", 
+//         "temperament": "Grumpy, affectionate", 
 //         "interests": "Eating, cuddlin, world domination",
 //         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
 //     }

@@ -66,7 +66,7 @@ app.post('/regForm', (request, response) => {
         console.log(JSON.stringify(request.body));
         client.query(
         `INSERT INTO
-        pets(owner_id, imgurl, breed, sex, name, age, color, size, temperment, interests, description)
+        pets(owner_id, imgurl, breed, sex, name, age, color, size, temperament, interests, description)
         VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
         `,
         [
@@ -78,7 +78,7 @@ app.post('/regForm', (request, response) => {
             request.body.petObj.age,
             request.body.petObj.color,
             request.body.petObj.size,
-            request.body.petObj.temperment,
+            request.body.petObj.temperament,
             request.body.petObj.interests,
             request.body.petObj.about
         ]
@@ -133,8 +133,8 @@ function loadPets() {
             fs.readFile('raw-user-data.json', (err, fd) => {
                 JSON.parse(fd.toString()).forEach(pet => {
                     client.query(
-                    `INSERT INTO pets(id, owner_id, imgUrl, name, age, breed, sex, color, size, temperment, interests, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,
-                    [pet.id, pet.owner_id, pet.imgUrl, pet.name, pet.age, pet.breed, pet.sex, pet.color, pet.size, pet.temperment, pet.interests, pet.description]
+                    `INSERT INTO pets(id, owner_id, imgUrl, name, age, breed, sex, color, size, temperament, interests, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,
+                    [pet.id, pet.owner_id, pet.imgUrl, pet.name, pet.age, pet.breed, pet.sex, pet.color, pet.size, pet.temperament, pet.interests, pet.description]
                     )
                     .catch(console.error);
                 })
@@ -170,7 +170,7 @@ function loadDB() {
             sex VARCHAR(255),
             color VARCHAR(255),
             size VARCHAR(255),
-            temperment VARCHAR(255),
+            temperament VARCHAR(255),
             interests VARCHAR(255),
             description VARCHAR(255)
         );`

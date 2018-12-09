@@ -101,7 +101,7 @@ form input[type='button'] {
 @media screen and (min-width: 768px) {
 .signupPopup {
     width: 768px;
-    top: 80%;
+    top: 55%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }

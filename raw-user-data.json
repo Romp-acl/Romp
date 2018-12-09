@@ -1,6 +1,7 @@
 [
     {
         "id": "1",
+        "owner_id" : "1",
         "username": "FearAndLoathing",
         "password": "password1",
         "email": "fearandloathing@hotmail.com",
@@ -12,12 +13,13 @@
         "age": "5 years",
         "color": "white and brown",
         "size": "small",
-        "temperment": "feisty", 
+        "temperament": "feisty", 
         "interests": "getting angry when he's happy",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
     {
         "id": "2",
+        "owner_id" : "2",
         "username": "BMWPeter",
         "password": "password2",
         "email": "bmwpeter@gmail.com",
@@ -29,13 +31,14 @@
         "age": "4 years",
         "color": "maple brown",
         "size": "small",
-        "temperment": "playful", 
+        "temperament": "playful", 
         "interests": "chasing other dogs",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
         
     },
     {
         "id": "3",
+        "owner_id" : "3",
         "username": "Ms.brittany",
         "password": "password3",
         "email": "brit@gmail.com",
@@ -47,13 +50,14 @@
         "age": "6 years",
         "color": "",
         "size": "white and brown",
-        "temperment": "cuddly", 
+        "temperament": "cuddly", 
         "interests": "Cuddling",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
         
     },
     {
         "id": "4",
+        "owner_id" : "4",
         "username": "Ash&Nick",
         "password": "password4",
         "email": "ash@yahoo.com",
@@ -65,7 +69,7 @@
         "age": "2 years",
         "color": "brown",
         "size": "small",
-        "temperment": "playful", 
+        "temperament": "playful", 
         "interests": "playing with toys",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
         
@@ -73,6 +77,7 @@
 
     {
         "id": "5",
+        "owner_id" : "5",
         "username": "katedam",
         "password": "password5",
         "email": "dimitri@gmail.com",
@@ -84,7 +89,7 @@
         "age": "6 years",
         "color": "Black",
         "size": "large",
-        "temperment": "Philosophical, inquisitive, soulful, silly", 
+        "temperament": "Philosophical, inquisitive, soulful, silly", 
         "interests": "Squirrelin, hikin, playdates, making fun, cuddlin",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
         
@@ -92,6 +97,7 @@
 
     {
         "id": "6",
+        "owner_id" : "6",
         "username": "Dan-The-Man",
         "password": "password6",
         "email": "skinny@gmail.com",
@@ -103,13 +109,14 @@
         "age": "14 years",
         "color": "Tan",
         "size": "medium",
-        "temperment": "Lazy, inquisitive, rude, silly", 
+        "temperament": "Lazy, inquisitive, rude, silly", 
         "interests": "Eating, napping, sleeping, cuddlin",
         "description": "Cat ipsum dolor sit amet, i’m so hungry i’m so hungry but ew not for that and a nice warm laptop for me to sit on and small kitty warm kitty little balls of fur munch on tasty moths."
         
     },
     {
         "id": "7",
+        "owner_id" : "7",
         "username": "Dog-Lover",
         "password": "Dog-Lover",
         "email": "Dog-Lover@gmail.com",
@@ -121,12 +128,13 @@
         "age": "11 years old",
         "color": "White",
         "size": "Medium",
-        "temperment": "Lazy, inquisitive, rude, silly", 
+        "temperament": "Lazy, inquisitive, rude, silly", 
         "interests": "Eating, napping, sleeping, cuddlin",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
     {
         "id": "8",
+        "owner_id" : "8",
         "username": "Bobby",
         "password": "Bobby",
         "email": "Bobby@gmail.com",
@@ -138,12 +146,13 @@
         "age": "7 years old",
         "color": "White",
         "size": "Large",
-        "temperment": "Lazy, inquisitive, rude, silly", 
+        "temperament": "Lazy, inquisitive, rude, silly", 
         "interests": "Eating, napping, sleeping, cuddlin",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
     {
         "id": "9",
+        "owner_id" : "9",
         "username": "Bonny",
         "password": "Bonny",
         "email": "Bonny@gmail.com",
@@ -155,12 +164,13 @@
         "age": "2 years old",
         "color": "Black",
         "size": "Small",
-        "temperment": "Inquisitive, rude, silly, playful", 
+        "temperament": "Inquisitive, rude, silly, playful", 
         "interests": "Barking, eating, napping, sleeping, cuddlin",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
     {
         "id": "10",
+        "owner_id" : "10",
         "username": "randyroute",
         "password": "fatherslittletiger",
         "email": "randy@gmail.com",
@@ -172,12 +182,13 @@
         "age": "14 years old",
         "color": "Orange",
         "size": "Small",
-        "temperment": "Grumpy, annoyed, affectionate, Eating, world domination", 
+        "temperament": "Grumpy, annoyed, affectionate, Eating, world domination", 
         "interests": "cat sitter",
         "description": "Cat ipsum dolor sit amet, i’m so hungry i’m so hungry but ew not for that and a nice warm laptop for me to sit on and small kitty warm kitty little balls of fur munch on tasty moths."
     },
     {
         "id": "11",
+        "owner_id" : "11",
         "username": "lillylamb",
         "password": "iheartpups",
         "email": "lamb@gmail.com",
@@ -189,12 +200,13 @@
         "age": "6 years old",
         "color": "Brown",
         "size": "Small",
-        "temperment": "Chatty & sweet, chasing bugs, lap kitty", 
+        "temperament": "Chatty & sweet, chasing bugs, lap kitty", 
         "interests": "cat sitter",
         "description": "Cat ipsum dolor sit amet, i’m so hungry i’m so hungry but ew not for that and a nice warm laptop for me to sit on and small kitty warm kitty little balls of fur munch on tasty moths."
     },
     {
         "id": "12",
+        "owner_id" : "12",
         "username": "whiskerlovin",
         "password": "kittykitty",
         "email": "whiskers@gmail.com",
@@ -206,12 +218,13 @@
         "age": "9 years old",
         "color": "Grey",
         "size": "large",
-        "temperment": "Standoffish, quiet", 
+        "temperament": "Standoffish, quiet", 
         "interests": "Cat sitter",
         "description": "Cat ipsum dolor sit amet, i’m so hungry i’m so hungry but ew not for that and a nice warm laptop for me to sit on and small kitty warm kitty little balls of fur munch on tasty moths."
     },
     {
         "id": "13",
+        "owner_id" : "13",
         "username": "George78",
         "password": "gimmeallthekitties",
         "email": "george@gmail.com",
@@ -223,12 +236,13 @@
         "age": "3 years old",
         "color": "white",
         "size": "Small",
-        "temperment": "Chatty & sweet", 
+        "temperament": "Chatty & sweet", 
         "interests": "cat sitter",
         "description": "Cat ipsum dolor sit amet, i’m so hungry i’m so hungry but ew not for that and a nice warm laptop for me to sit on and small kitty warm kitty little balls of fur munch on tasty moths."
     },
     {
         "id": "14",
+        "owner_id" : "14",
         "username": "LeslieKnope",
         "password": "iheartwaffles",
         "email": "knope@gmail.com",
@@ -240,12 +254,13 @@
         "age": "5 years old",
         "color": "Brown",
         "size": "Small",
-        "temperment": "Great with kids", 
+        "temperament": "Great with kids", 
         "interests": "Petting zoos and concerts",
         "description": "Cat ipsum dolor sit amet, i’m so hungry i’m so hungry but ew not for that and a nice warm laptop for me to sit on and small kitty warm kitty little balls of fur munch on tasty moths."
     },
     {
         "id": "15",
+        "owner_id" : "15",
         "username": "saraham",
         "password": "loveacat",
         "email": "saraham@gmail.com",
@@ -257,12 +272,13 @@
         "age": "5 years old",
         "color": "Black",
         "size": "Small",
-        "temperment": "Frisky", 
+        "temperament": "Frisky", 
         "interests": "Meet up with other cat owners, cat sitting",
         "description": "Cat ipsum dolor sit amet, i’m so hungry i’m so hungry but ew not for that and a nice warm laptop for me to sit on and small kitty warm kitty little balls of fur munch on tasty moths."
     },
     {
         "id": "16",
+        "owner_id" : "16",
         "username": "I<3Shepherds",
         "password": "shepherds4life",
         "email": "shepherds@gmail.com",
@@ -274,12 +290,13 @@
         "age": "6 years old",
         "color": "Brown",
         "size": "large",
-        "temperment": "Chatty & sweet", 
+        "temperament": "Chatty & sweet", 
         "interests": "Chasing bugs, lap kitty",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
     {
         "id": "17",
+        "owner_id" : "17",
         "username": "Richard",
         "password": "password78",
         "email": "rich@gmail.com",
@@ -291,12 +308,13 @@
         "age": "6 years old",
         "color": "Black",
         "size": "medium",
-        "temperment": "loyal, loving, affectionate", 
+        "temperament": "loyal, loving, affectionate", 
         "interests": "Playdates, dog-walker",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
     {
         "id": "18",
+        "owner_id" : "18",
         "username": "Allison",
         "password": "password98",
         "email": "alli@gmail.com",
@@ -308,12 +326,13 @@
         "age": "10 years old",
         "color": "Black",
         "size": "medium",
-        "temperment": "playful, sweet", 
+        "temperament": "playful, sweet", 
         "interests": "dog-sitter, playdates",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
     {
         "id": "19",
+        "owner_id" : "19",
         "username": "Nicole89",
         "password": "password34",
         "email": "nicole@gmail.com",
@@ -325,12 +344,13 @@
         "age": "1 yr old",
         "color": "Brown",
         "size": "medium",
-        "temperment": "High energy, playful, talkative", 
+        "temperament": "High energy, playful, talkative", 
         "interests": "playdates",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     },
     {
         "id": "20",
+        "owner_id" : "20",
         "username": "Kendall30",
         "password": "password12",
         "email": "kendall@gmail.com",
@@ -342,7 +362,7 @@
         "age": "7 years old",
         "color": "Grey",
         "size": "Small",
-        "temperment": "Intelligent, snuggly", 
+        "temperament": "Intelligent, snuggly", 
         "interests": "playdates",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     }
