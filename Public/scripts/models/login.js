@@ -4,9 +4,13 @@ $('.hero button').on('click', function(){
 });
 
 $('#quick-login').on('click', function() {
-    $('.signupPopup').toggleClass('active');
-    $('.heroForm').toggleClass('active');
-    userLogin();
+    if ($('.signupPopup').hasClass('active')) {
+        console.log('already active');
+    } else {
+        $('.signupPopup').toggleClass('active');
+        $('.heroForm').toggleClass('active'); 
+        userLogin();
+    }
 })
 
 function setUpSignIn() {
@@ -42,13 +46,12 @@ function userLogin() {
     });
     
 }
+
 function homeBtnActive() {
     $('#return-profile').on('click', function() {
         returnProfile($username);
     });
 }
-
-
 
 $(window).ready(function() {
     setUpSignIn();
