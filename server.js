@@ -103,7 +103,7 @@ function loadComments() {
                     .catch(console.error);
                 })
             })
-            client.query('ALTER SEQUENCE comments_id_seq RESTART WITH 10')
+            client.query('ALTER SEQUENCE comments_id_seq RESTART WITH 100')
         }
     })
 }
@@ -121,7 +121,7 @@ function loadUsers() {
                     .catch(console.error);
                 })
             }) 
-            client.query('ALTER SEQUENCE users_id_seq RESTART WITH 10') 
+            client.query('ALTER SEQUENCE users_id_seq RESTART WITH 100') 
         }
     })
 }
@@ -139,7 +139,7 @@ function loadPets() {
                     .catch(console.error);
                 })
             })
-            client.query('ALTER SEQUENCE pets_id_seq RESTART WITH 10')
+            client.query('ALTER SEQUENCE pets_id_seq RESTART WITH 100')
         }
     })   
 }
