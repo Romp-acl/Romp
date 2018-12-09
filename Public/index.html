@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romp Homepage</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script id="user-profile" type="text/x-handlebars-template">
         <div class="inner">
             <div class="petProfile">
@@ -38,6 +39,10 @@
                             <div class="innerOptions">
                                 <h3>Filter By:</h3>
                                 <div class="filterCheckboxes">
+                                    <h4>Species</h4>
+                                    <input type="checkbox" value="dog" onchange="updateView(this);"/> Dog
+                                    <input type="checkbox" value="cat" onchange="updateView(this);"/> Cat
+                                    <input type="checkbox" value="horse" onchange="updateView(this);"/> Horse
                                     <h4>Breed</h4>
                                     <input type="checkbox" value="pug" onchange="updateView(this);"/> Pug
                                     <input type="checkbox" value="chihuahua" onchange="updateView(this);"/> Chihuahua
@@ -47,6 +52,8 @@
                                     <h4>Color</h4>
                                     <input type="checkbox" value="black" onchange="updateView(this);"/> Black
                                     <input type="checkbox" value="white" onchange="updateView(this);"/> White
+                                    <input type="checkbox" value="brown" onchange="updateView(this);"/> Brown
+                                    <input type="checkbox" value="grey" onchange="updateView(this);"/> Grey
                                     <h4>Gender</h4>
                                     <input type="checkbox" value="male" onchange="updateView(this);"/> Male
                                     <input type="checkbox" value="female" onchange="updateView(this);"/> Female
@@ -70,6 +77,9 @@
         <div class="inner">
             <div class="logoAndTagLine">
                 <img src="assets/images/RompLogo.png" alt="">
+                <div class="hamburgerMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
                 <div class="tagline">
                     <h1>Romp!</h1>
                     <p>SOCIAL PETWORKING</p>

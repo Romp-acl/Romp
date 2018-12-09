@@ -11,8 +11,14 @@ header {
     max-width: 1200px;
     margin: auto;
     z-index: 1;
+    position: relative;
 }
-
+nav {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    border-top: 2px solid white;
+}
 header .inner {
     display: flex;
     justify-content: space-between;
@@ -23,12 +29,28 @@ header .inner {
 header img {
     max-width: 100px;
 }
-
-.logoAndTagLine, header ul {
+header ul {
+    list-style: none;
+    display: block;
+    background-color: blueviolet;
+    margin: 0;
+}
+.hamburgerMenu {
+    position: absolute;
+    right: 0;
+    font-size: 50px;
+    margin-right: 20px;
+}
+.logoAndTagLine {
     display: flex;
     align-items: center;
 }
-
+nav {
+    display: none;
+}
+nav.active {
+    display: block;
+}
 .tagline h1, .tagline p {
     margin: 0;
     margin-left: 10px;
@@ -60,7 +82,9 @@ header ul li {
     width: 100%;
     z-index: -1;
 }
-
+.hero .inner {
+    position: unset;
+}
 .bgOverlay {
     position: absolute;
     top: 0;
@@ -91,4 +115,20 @@ header ul li {
 .hero button:hover {
     transform: scale(1.2);
     cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+    header ul {
+        display: flex;
+        align-items: center;
+    }
+    nav {
+        position: relative;
+        width: auto;
+        top: unset;
+        border: none;
+        display: block;
+    }
+    .hamburgerMenu {
+        display: none;
+    }
 }
