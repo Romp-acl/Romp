@@ -25,7 +25,7 @@
         "username": "BMWPeter",
         "password": "password2",
         "email": "bmwpeter@gmail.com",
-        "address": "1025 SE 11th Ave. Portland, OR 97214",
+        "address": "888 SE 8th Ave. Portland, OR 97214",
         "imgUrl": "/assets/dogs/brown-dachshund.jpg",
         "breed": "Dachshund",
         "sex": "female",
@@ -384,6 +384,24 @@
         "size": "Small",
         "temperament": "Intelligent, snuggly", 
         "interests": "playdates",
+        "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
+    },
+    {
+        "id": "21",
+        "owner_id" : "21",
+        "username": "Zack89",
+        "password": "Lanceisbest",
+        "email": "zacharty@gmail.com",
+        "address": "1025 SE 11th Ave. Portland, OR 97214",
+        "imgUrl": "assets/dogs/Lance.png",
+        "breed": "Dachshund",
+        "sex": "Male",
+        "name": "Lance",
+        "age": "12 years old",
+        "color": "Brown",
+        "size": "Small",
+        "temperament": "loyal, snuggly", 
+        "interests": "playdates, long walks",
         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
     }
 ]
