@@ -4,8 +4,8 @@ function UserProfile(user) {
     this.password = user.password;
     this.email = user.email;
     this.address = user.address;
-    this.id = user.owner_id;
     this.petObj = {
+        species : user.species,
         imgUrl : user.imgurl,
         breed : user.breed,
         sex : user.sex,

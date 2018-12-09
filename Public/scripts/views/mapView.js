@@ -14,12 +14,13 @@ function initMap() {
                 title: UserProfile.all[i].petObj.name,
                 properties: {
                     owner_id: UserProfile.all[i].id,
+                    species: UserProfile.all[i].petObj.species, 
                     color: UserProfile.all[i].petObj.color, 
                     breed: UserProfile.all[i].petObj.breed,
                     sex: UserProfile.all[i].petObj.sex,
                     age: UserProfile.all[i].petObj.age,
                     img: UserProfile.all[i].petObj.imgUrl,
-                    category: [UserProfile.all[i].petObj.breed.toLowerCase(), UserProfile.all[i].petObj.color.toLowerCase(), UserProfile.all[i].petObj.sex.toLowerCase(), UserProfile.all[i].petObj.size.toLowerCase()]
+                    category: [UserProfile.all[i].petObj.breed.toLowerCase(), UserProfile.all[i].petObj.species.toLowerCase(), UserProfile.all[i].petObj.color.toLowerCase(), UserProfile.all[i].petObj.sex.toLowerCase(), UserProfile.all[i].petObj.size.toLowerCase()]
                 }
             }));
         };

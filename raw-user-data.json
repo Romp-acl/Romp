@@ -2,6 +2,7 @@
     {
         "id": "1",
         "owner_id" : "1",
+        "species": "dog",
         "username": "FearAndLoathing",
         "password": "password1",
         "email": "fearandloathing@hotmail.com",
@@ -20,6 +21,7 @@
     {
         "id": "2",
         "owner_id" : "2",
+        "species": "dog",
         "username": "BMWPeter",
         "password": "password2",
         "email": "bmwpeter@gmail.com",
@@ -39,6 +41,7 @@
     {
         "id": "3",
         "owner_id" : "3",
+        "species": "dog",
         "username": "Ms.brittany",
         "password": "password3",
         "email": "brit@gmail.com",
@@ -58,15 +61,16 @@
     {
         "id": "4",
         "owner_id" : "4",
-        "username": "Ash&Nick",
-        "password": "password4",
-        "email": "ash@yahoo.com",
+        "species": "dog",
+        "username": "CookieTheCutie",
+        "password": "Cookie",
+        "email": "cookie@gmail.com",
         "address": "1434 SE Main St. Portland, OR 97214",
-        "imgUrl": "/assets/dogs/scrappy.jpg",
-        "breed": "Dachshund Chihuahua mix",
-        "sex": "male",
-        "name": "scrappy",
-        "age": "2 years",
+        "imgUrl": "/assets/dogs/Cookie.jpg",
+        "breed": "Chihuahua",
+        "sex": "female",
+        "name": "Cookie",
+        "age": "1 years",
         "color": "brown",
         "size": "small",
         "temperament": "playful", 
@@ -78,6 +82,7 @@
     {
         "id": "5",
         "owner_id" : "5",
+        "species": "dog",
         "username": "katedam",
         "password": "password5",
         "email": "dimitri@gmail.com",
@@ -98,6 +103,7 @@
     {
         "id": "6",
         "owner_id" : "6",
+        "species": "cat",
         "username": "Dan-The-Man",
         "password": "password6",
         "email": "skinny@gmail.com",
@@ -117,6 +123,7 @@
     {
         "id": "7",
         "owner_id" : "7",
+        "species": "dog",
         "username": "Dog-Lover",
         "password": "Dog-Lover",
         "email": "Dog-Lover@gmail.com",
@@ -135,6 +142,7 @@
     {
         "id": "8",
         "owner_id" : "8",
+        "species": "dog",
         "username": "Bobby",
         "password": "Bobby",
         "email": "Bobby@gmail.com",
@@ -153,6 +161,7 @@
     {
         "id": "9",
         "owner_id" : "9",
+        "species": "dog",
         "username": "Bonny",
         "password": "Bonny",
         "email": "Bonny@gmail.com",
@@ -171,6 +180,7 @@
     {
         "id": "10",
         "owner_id" : "10",
+        "species": "cat",
         "username": "randyroute",
         "password": "fatherslittletiger",
         "email": "randy@gmail.com",
@@ -189,6 +199,7 @@
     {
         "id": "11",
         "owner_id" : "11",
+        "species": "cat",
         "username": "lillylamb",
         "password": "iheartpups",
         "email": "lamb@gmail.com",
@@ -207,6 +218,7 @@
     {
         "id": "12",
         "owner_id" : "12",
+        "species": "cat",
         "username": "whiskerlovin",
         "password": "kittykitty",
         "email": "whiskers@gmail.com",
@@ -225,6 +237,7 @@
     {
         "id": "13",
         "owner_id" : "13",
+        "species": "cat",
         "username": "George78",
         "password": "gimmeallthekitties",
         "email": "george@gmail.com",
@@ -243,6 +256,7 @@
     {
         "id": "14",
         "owner_id" : "14",
+        "species": "horse",
         "username": "LeslieKnope",
         "password": "iheartwaffles",
         "email": "knope@gmail.com",
@@ -261,6 +275,7 @@
     {
         "id": "15",
         "owner_id" : "15",
+        "species": "cat",
         "username": "saraham",
         "password": "loveacat",
         "email": "saraham@gmail.com",
@@ -279,6 +294,7 @@
     {
         "id": "16",
         "owner_id" : "16",
+        "species": "dog",
         "username": "I<3Shepherds",
         "password": "shepherds4life",
         "email": "shepherds@gmail.com",
@@ -297,11 +313,12 @@
     {
         "id": "17",
         "owner_id" : "17",
+        "species": "dog",
         "username": "Richard",
         "password": "password78",
         "email": "rich@gmail.com",
         "address": "3406 NE 79th Ave, Portland, OR 97213",
-        "imgUrl": "assets/dogs/black_pitbull.jpg",
+        "imgUrl": "https://media.istockphoto.com/photos/pitbull-dog-portrait-with-human-expression-picture-id697946430?k=6&m=697946430&s=612x612&w=0&h=bzcpbOsCSejYy-LI8i3X0WehaiwaRuTVSSAfOrLvc8E=",
         "breed": "Pitbull",
         "sex": "Male",
         "name": "Stuffin",
@@ -315,6 +332,7 @@
     {
         "id": "18",
         "owner_id" : "18",
+        "species": "dog",
         "username": "Allison",
         "password": "password98",
         "email": "alli@gmail.com",
@@ -333,6 +351,7 @@
     {
         "id": "19",
         "owner_id" : "19",
+        "species": "dog",
         "username": "Nicole89",
         "password": "password34",
         "email": "nicole@gmail.com",
@@ -351,6 +370,7 @@
     {
         "id": "20",
         "owner_id" : "20",
+        "species": "dog",
         "username": "Kendall30",
         "password": "password12",
         "email": "kendall@gmail.com",
