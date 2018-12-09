@@ -88,5 +88,19 @@
 //         "interests": "Eating, napping, sleeping, cuddlin",
 //         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
 //     }
+//     {
+//         "id": "7",
+//         "owner_id": "6",
+//         "imgUrl": "/assets/dogs/skinny.jpg",
+//         "breed": "Tabby",
+//         "sex": "male",
+//         "name": "Kinglsey",
+//         "age": "14 years",
+//         "color": "Orange",
+//         "size": "small",
+//         "temperment": "Grumpy, affectionate", 
+//         "interests": "Eating, cuddlin, world domination",
+//         "description": "Doggo ipsum ur givin me a spook. Sub woofer noodle horse long woofer aqua doggo stop it fren shooberino, maximum borkdrive snoot pupperino aqua doggo, ruff shibe maximum borkdrive mlem."
+//     }
 
 // ]

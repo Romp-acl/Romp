@@ -26,8 +26,13 @@ function userLogin() {
             }
         });
         initLoginProfile();
-        $('#return-profile').on('.click', function() {
-            returnProfile($username);
-        })
+        homeBtnActive();
     });
+    
+}
+function homeBtnActive() {
+    console.log($('#return-profile'));
+    $('#return-profile').on('click', function() {
+        returnProfile($username);
+    })
 }
