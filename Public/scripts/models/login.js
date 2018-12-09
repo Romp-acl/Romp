@@ -30,9 +30,11 @@ function userLogin() {
     $('#loginBtn').on('click', function() {
         $username = $("input[name='username']").val();
         $password = $("input[name='password']").val();
+        console.log(UserProfile.all);
         UserProfile.all.map(user => {
             if ($username == user.username && $password == user.password) {
                 $loginID = user.id; 
+                console.log('found match: ', $loginID);
                 $('.userProfile').prepend(user.toHtml());
                 $('.hero').hide();
             };

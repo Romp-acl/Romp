@@ -1,6 +1,7 @@
 var markers = [];
 
 function initMap() {
+    console.log(document.getElementsByClassName('map'));
     var map = new google.maps.Map(document.getElementsByClassName('map')[0], {
         zoom: 10, 
         center: new google.maps.LatLng(45.5122, -122.6587),
