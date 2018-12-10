@@ -4,110 +4,28 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = 'postgres://localhost:5432';
+const conString = 'postgres://postgres:Simplepassword!@localhost:5432/postgres';
 const client = new pg.Client(conString);
 
 client.connect();
-
 client.on('error', err => console.error(err));
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static('./Public'));
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 
 app.get('/', (request, response) => response.sendFile('./Public/index.html'));
-
-app.get('/userData', (request, response) => {
+app.get('/petData', (request, response) => {
     client.query(`
-    SELECT * FROM users
-    JOIN pets
-    ON users.id = pets.owner_id;
+        SELECT pets.*, users.username, users.address 
+        FROM pets
+        JOIN users ON users.id = pets.owner_id;
     `)
     .then(result => response.send(result.rows))
     .catch(console.error);
 });
 
-app.get('/msgBoardData', (request, response) => {
-    client.query(`
-    SELECT comments.*, users.username 
-    FROM comments
-    JOIN users ON comments.commenter_id = users.id;
-    `)
-    .then(result => response.send(result.rows))
-    .catch(console.error);
-})
-
-app.post('/userComment', (request, response) => {
-    console.log(request.body);
-    client.query(
-        `INSERT INTO comments(commenter_id, username, comment_text, profile_id)
-        VALUES($1, $2, $3, $4)`,
-        [
-            request.body.commenter_id,
-            request.body.username,
-            request.body.comment_text,
-            request.body.profile_id
-        ]
-    )
-    .then(() => response.send('Insert complete'))
-    .catch(console.error);
-})
-
-app.post('/regForm', (request, response) => {
-    client.query(
-        `INSERT INTO users(username, password, email, address) VALUES($1, $2, $3, $4) 
-        ON CONFLICT DO NOTHING
-        RETURNING id`,
-        [request.body.username, request.body.password, request.body.email, request.body.address]
-    )
-    .then((result) => {
-        console.log(JSON.stringify(request.body));
-        client.query(
-        `INSERT INTO
-        pets(owner_id, imgurl, species, breed, sex, name, age, color, size, temperament, interests, description)
-        VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
-        `,
-        [
-            result.rows[0].id,
-            request.body.petObj.imgUrl,
-            'dog',
-            request.body.petObj.breed,
-            request.body.petObj.sex,
-            request.body.petObj.name,
-            request.body.petObj.age,
-            request.body.petObj.color,
-            request.body.petObj.size,
-            request.body.petObj.temperament,
-            request.body.petObj.interests,
-            request.body.petObj.about
-        ]
-        )
-    })
-    .then(() => response.send('Insert complete'))
-    .catch(console.error);
-})
 
 loadDB();
-
-function loadComments() {
-    client.query('SELECT COUNT(*) FROM comments')
-    .then(result => {
-        if(!parseInt(result.rows[0].count)) {
-            fs.readFile('raw-comments-data.json', (err, fd) => {
-                JSON.parse(fd.toString()).forEach(comment => {
-                    client.query(
-                        `INSERT INTO comments(id, commenter_id, username, comment_text, profile_id) VALUES ($1, $2, $3, $4, $5)`,
-                        [comment.id, comment.commenter_id, comment.username, comment.comment_text, comment.profile_id]
-                    )
-                    .catch(console.error);
-                })
-            })
-            client.query('ALTER SEQUENCE comments_id_seq RESTART WITH 100')
-        }
-    })
-}
 
 function loadUsers() {
     client.query('SELECT COUNT(*) FROM users')
@@ -121,8 +39,7 @@ function loadUsers() {
                     )
                     .catch(console.error);
                 })
-            }) 
-            client.query('ALTER SEQUENCE users_id_seq RESTART WITH 100') 
+            })  
         }
     })
 }
@@ -131,16 +48,15 @@ function loadPets() {
     client.query('SELECT COUNT(*) FROM pets')
     .then(result => {
         if(!parseInt(result.rows[0].count)) {
-            fs.readFile('raw-user-data.json', (err, fd) => {
+            fs.readFile('raw-pet-data.json', (err, fd) => {
                 JSON.parse(fd.toString()).forEach(pet => {
                     client.query(
-                    `INSERT INTO pets(id, owner_id, species, imgUrl, name, age, breed, sex, color, size, temperament, interests, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)`,
-                    [pet.id, pet.owner_id, pet.species ,pet.imgUrl, pet.name, pet.age, pet.breed, pet.sex, pet.color, pet.size, pet.temperament, pet.interests, pet.description]
+                    `INSERT INTO pets(id, owner_id, imgUrl, name, age, breed, sex, color, size, interest, description) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`,
+                    [pet.id, pet.owner_id, pet.imgUrl, pet.name, pet.age, pet.breed, pet.sex, pet.color, pet.size, pet.interest, pet.description]
                     )
                     .catch(console.error);
                 })
             })
-            client.query('ALTER SEQUENCE pets_id_seq RESTART WITH 100')
         }
     })   
 }
@@ -153,7 +69,7 @@ function loadDB() {
             username VARCHAR(255) UNIQUE NOT NULL,
             password VARCHAR(255) UNIQUE NOT NULL,
             email VARCHAR(255) UNIQUE NOT NULL,
-            address VARCHAR(255) 
+            address VARCHAR(255) NOT NULL
         );`
     )
     .then(loadUsers)
@@ -164,7 +80,6 @@ function loadDB() {
         pets (
             id SERIAL PRIMARY KEY,
             owner_id INTEGER,
-            species VARCHAR(255),
             imgUrl VARCHAR(255),
             name VARCHAR(255),
             age VARCHAR(255),
@@ -172,24 +87,10 @@ function loadDB() {
             sex VARCHAR(255),
             color VARCHAR(255),
             size VARCHAR(255),
-            temperament VARCHAR(255),
-            interests VARCHAR(255),
+            interest VARCHAR(255),
             description VARCHAR(255)
         );`
     )
     .then(loadPets)
-    .catch(console.error);
-
-    client.query(`
-        CREATE TABLE IF NOT EXISTS
-        comments (
-            id SERIAL PRIMARY KEY,
-            commenter_id INTEGER,
-            username VARCHAR(30),
-            comment_text VARCHAR(140),
-            profile_id INTEGER
-        );`
-    )
-    .then(loadComments)
     .catch(console.error);
 }
